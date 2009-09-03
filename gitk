@@ -1,0 +1,31 @@
+set mainfont {Monaco 14}
+set textfont {Monaco 14}
+set uifont {"Monaco Bold" 14}
+set tabstop 8
+set findmergefiles 0
+set maxgraphpct 50
+set maxwidth 16
+set cmitmode patch
+set wrapcomment none
+set autoselect 1
+set showneartags 1
+set showlocalchanges 1
+set datetimeformat {%Y-%m-%d %H:%M:%S}
+set limitdiffs 1
+set bgcolor white
+set fgcolor black
+set colors {green red blue magenta darkgrey brown orange}
+set diffcolors {red "#00a000" blue}
+set markbgcolor #e0e0ff
+set diffcontext 3
+set selectbgcolor gray85
+set extdifftool meld
+set perfile_attrs 0
+set geometry(main) 1191x670+5+45
+set geometry(topwidth) 1187
+set geometry(topheight) 150
+set geometry(pwsash0) "423 2"
+set geometry(pwsash1) "635 2"
+set geometry(botwidth) 529
+set geometry(botheight) 500
+set permviews {}

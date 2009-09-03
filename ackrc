@@ -1,0 +1,18 @@
+--sort-files
+--color
+--context=1
+--follow
+--group
+--all
+-a
+--ignore-dir=log
+--ignore-dir=logs
+--ignore-dir=vendor
+
+# Keep the following three together
+--type-set
+--type-add=ruby=.haml,.rake,.builder
+--type-add=css=.sass
+
+--smart-case
+# --pager=less -r

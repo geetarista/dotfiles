@@ -1,0 +1,23 @@
+function cdw() {
+  cd ~/workspace/$1;
+}
+ 
+alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
+alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
+ 
+alias reload='. ~/.bashrc'
+
+alias k9="killall -9"
+
+function killnamed () { 
+  ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill 
+}
+
+alias o='open . &'
+
+alias tu='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+
+function gc() { 
+    git commit -v -a -m "$*"
+}

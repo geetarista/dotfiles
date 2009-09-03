@@ -1,0 +1,58 @@
+source ~/.git_completion
+source ~/.bash_completion
+complete -C ~/.rake_completion -o default rake
+complete -C ~/.capistrano_completion -o default capistrano
+ 
+function ps? {
+  ps aux | grep "$@"
+}
+
+extract () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2) tar xjf $1 ;;
+      *.tar.gz) tar xzf $1 ;;
+      *.bz2) bunzip2 $1 ;;
+      *.rar) unrar x $1 ;;
+      *.gz) gunzip $1 ;;
+      *.tar) tar xf $1 ;;
+      *.tbz2) tar xjf $1 ;;
+      *.tgz) tar xzf $1 ;;
+      *.zip) unzip $1 ;;
+      *.Z) uncompress $1 ;;
+      *) echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# a -- black
+# b -- red
+# c -- green
+# d -- brown
+# e -- blue
+# f -- magenta
+# g -- cyan
+# h -- light gray
+# A -- bold black, usually shows up as dark gray
+# B -- bold red
+# C -- bold green
+# D -- bold brown, usually shows up as yellow
+# E -- bold blue
+# F -- bold magenta
+# G -- bold cyan
+# H -- bold light gray; looks like bright white
+# x -- default foreground or background
+
+DIR=Ex; SYM_LINK=Gx; SOCKET=Fx; PIPE=dx; EXE=Cx; BLOCK_SP=Dx; CHAR_SP=Dx; EXE_SUID=hb; EXE_GUID=ad; DIR_STICKY=Ex; DIR_WO_STICKY=Ex
+
+export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
+export CLICOLOR=1
+export TERM=xterm-color
+
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+WHITE="\[\033[0;0m\]"
+
+PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(__git_ps1 "[%s]")$WHITE\$ "
