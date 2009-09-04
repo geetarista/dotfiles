@@ -4,6 +4,9 @@ function cdw() {
  
 alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
 alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
+
+alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
+alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
  
 alias reload='. ~/.bashrc'
 
