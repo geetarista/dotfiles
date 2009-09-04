@@ -1,6 +1,10 @@
 function cdw() {
   cd ~/workspace/$1;
 }
+
+function daylog() {
+  git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs ruby -e "puts ARGV.join(' ')"
+}
  
 alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
 alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
