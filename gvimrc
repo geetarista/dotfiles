@@ -9,6 +9,6 @@ set guioptions=egmrt
 set guioptions-=T " No toolbar
 set showtabline=2
 hi CursorLine guibg=Grey20
-set columns=175
+set columns=200
 " set guioptions+=c
 set guifont=DejaVu\ Sans\ Mono\ 12
