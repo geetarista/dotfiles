@@ -22,7 +22,7 @@ set cursorline
 let NERDTreeShowHidden=1
 set wildignore=*.swo,*.swp
 let mapleader = ","
-map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>g :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FuzzyFinderFile<CR>
 map <leader>r :FuzzyFinderMruFile<CR>
