@@ -3,7 +3,7 @@ function cdw() {
 }
 
 function daylog() {
-  git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs ruby -e "puts ARGV.join(' ')"
+  git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs -0 ruby -e "puts ARGV.to_s.split(/ \n/).join(' ')"
 }
  
 alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
