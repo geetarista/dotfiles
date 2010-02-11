@@ -56,6 +56,8 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 "highlight Pmenu ctermbg=238 gui=bold
 
+autocmd BufRead,BufNewFile Gemfile set filetype=Gemfile
+
 filetype on
 filetype plugin indent on " load filetype plugins/indent settings
 
