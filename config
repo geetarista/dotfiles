@@ -5,8 +5,6 @@ complete -C ~/.capistrano_completion -o default capistrano
 
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
-rvm 1.9.1
- 
 function ps? {
   ps aux | grep "$@"
 }

@@ -70,3 +70,5 @@ command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
 
 set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
+
+au! BufRead,BufNewFile *.json setfiletype json
