@@ -5,3 +5,5 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 export EDITOR="mvim -f"
 
 export GIT_EDITOR="mvim -f"
+
+export RUBYOPT=rubygems
