@@ -35,11 +35,11 @@ map <leader>v :sp ~/.vimrc<CR>
 map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 "Fast reloading of the .vimrc
-map <leader>s :source ~/vim_local/vimrc<cr>
+map <leader>s :source ~/.vim/.vimrc<cr>
 "Fast editing of .vimrc
-map <leader>e :e! ~/vim_local/vimrc<cr>
+map <leader>e :e! ~/.vim/.vimrc<cr>
 "When .vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/vim_local/vimrc
+autocmd! bufwritepost vimrc source ~/.vim/.vimrc
 
 set history=25 "Set how many commands to retain in history
 
