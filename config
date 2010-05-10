@@ -9,6 +9,13 @@ function ps? {
   ps aux | grep "$@"
 }
 
+# mkdir, cd into it
+# http://onethingwell.org/post/586977440/mkcd-improved
+mkcd () {
+  mkdir -p "$*"
+  cd "$*"
+}
+
 extract () {
   if [ -f $1 ] ; then
     case $1 in
