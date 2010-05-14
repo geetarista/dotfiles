@@ -33,5 +33,6 @@
   whitespace = nowarn
 [alias]
   unadd = reset HEAD
+  pulldiff = diff HEAD^ HEAD
 [merge]
   tool = opendiff
