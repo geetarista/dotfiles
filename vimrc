@@ -7,7 +7,7 @@ set novisualbell  " No blinking
 set noerrorbells  " No noise
 set laststatus=2  " Always show status line
 set tabstop=2 " Use 2 spaces for tabs
-set smarttab " Authomatic indenting
+set smarttab " Automatic indenting
 set shiftwidth=2
 set autoindent
 set expandtab
