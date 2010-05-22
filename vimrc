@@ -46,6 +46,9 @@ set history=25 "Set how many commands to retain in history
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 map <leader>d :NERDTreeToggle<CR>
 
+" Toggle spell checking
+nmap <silent> <leader>s :set spell!<CR>
+
 set autoread "Set to auto read when a file is changed from the outside
 
 "ruby omnicomplete
