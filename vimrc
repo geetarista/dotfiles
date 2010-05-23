@@ -75,3 +75,6 @@ set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
 
 au! BufRead,BufNewFile *.json setfiletype json
+
+" Duplicate visual selection
+vmap <C-d> y'>p
