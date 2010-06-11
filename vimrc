@@ -65,6 +65,10 @@ map <leader>s :source ~/.vimrc<cr> " Fast reloading of the .vimrc
 map <leader>e :e! ~/.vimrc<cr> " Fast editing of .vimrc
 autocmd! bufwritepost vimrc source ~/.vimrc " When .vimrc is edited, reload it
 
+" Folds
+au BufWinLeave * mkview " save folds on exit
+au BufWinEnter * silent loadview " automatically load folds silently
+
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
 nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
