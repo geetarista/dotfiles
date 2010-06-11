@@ -41,6 +41,9 @@ let mapleader = ","
 
 " command-t
 let g:CommandTAlwaysShowDotFiles=1
+let g:CommandTMatchWindowAtTop=1
+let g:CommandTMaxHeight=15
+map <leader>R :CommandTFlush<CR>
 
 " Nerdtree
 let NERDTreeShowHidden=1
