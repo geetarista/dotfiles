@@ -66,13 +66,6 @@ nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
 " Ack function
 map <leader>a :Ack<space>
 
-function! AckGrep(command)
-  cexpr system("ack -a" . a:command)
-  cw
-endfunction
-
-command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
-
 " Language-specific
 compiler ruby " Enable compiler support for ruby
 
