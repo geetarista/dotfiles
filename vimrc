@@ -73,8 +73,6 @@ map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmpta
 
 nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
 
-map Q <Nop> " Disable ex mode
-
 map <leader>a :Ack<space> " Ack function
 
 compiler ruby " Enable compiler support for ruby
