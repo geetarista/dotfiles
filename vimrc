@@ -55,9 +55,9 @@ nmap <leader>i :set list!<CR> " Shortcut to toggle list (i for invisibles)
 vmap <C-d> y'>p " Duplicate visual selection
 
 " vimrc
-map <leader>s :source ~/.vim/.vimrc<cr> " Fast reloading of the .vimrc
-map <leader>e :e! ~/.vim/.vimrc<cr> " Fast editing of .vimrc
-autocmd! bufwritepost vimrc source ~/.vim/.vimrc " When .vimrc is edited, reload it
+map <leader>s :source ~/.vimrc<cr> " Fast reloading of the .vimrc
+map <leader>e :e! ~/.vimrc<cr> " Fast editing of .vimrc
+autocmd! bufwritepost vimrc source ~/.vimrc " When .vimrc is edited, reload it
 
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
