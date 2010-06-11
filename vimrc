@@ -1,5 +1,9 @@
 set nocompatible " no vi compatibility
 
+filetype on
+filetype plugin indent on " load filetype plugins/indent settings
+syntax on "Syntax highlighting
+
 " General settings
 set ruler " Show cursor position
 set number " Show line numbers
@@ -28,7 +32,6 @@ set hlsearch " Highlighted search
 set incsearch " Highlight search string as you type
 set ignorecase " Make searches case-insensitive
 set whichwrap+=<,>,h,l
-syntax on "Syntax highlighting
 
 " Typos
 nmap :W :w
@@ -66,10 +69,10 @@ map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmpta
 
 nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
 
-" Ack function
-map <leader>a :Ack<space>
+map Q <Nop> " Disable ex mode
 
-" Language-specific
+map <leader>a :Ack<space> " Ack function
+
 compiler ruby " Enable compiler support for ruby
 
 "ruby omnicomplete
@@ -79,8 +82,5 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 autocmd BufRead,BufNewFile Gemfile set filetype=Gemfile
-
-filetype on
-filetype plugin indent on " load filetype plugins/indent settings
 
 au! BufRead,BufNewFile *.json setfiletype json
