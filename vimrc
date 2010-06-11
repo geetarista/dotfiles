@@ -13,7 +13,7 @@ set history=25 "Set how many commands to retain in history
 set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
 set showbreak=…
-set wildignore=*.swo,*.swp,*.jpg,*.png,*.gif
+set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
 
 " Tabs
 set tabstop=2 " Use 2 spaces for tabs
@@ -39,14 +39,8 @@ nmap :Noh :noh
 
 let mapleader = ","
 
-" FuzzyFinder
-map <leader>b :FuzzyFinderBuffer<CR>
-map <leader>f :FuzzyFinderFile<CR>
-map <leader>r :FuzzyFinderMruFile<CR>
-map <leader>g :FuzzyFinderTextMate<CR>
-map <leader>R :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>:exe ":echo 'rescan complete'"<CR>
-let g:fuzzy_ignore = "*.log"
-let g:fuzzy_matching_limit = 70
+" command-t
+let g:CommandTAlwaysShowDotFiles=1
 
 " Nerdtree
 let NERDTreeShowHidden=1
