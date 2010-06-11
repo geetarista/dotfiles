@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-%w(rubygems hpricot irb/ext/save-history open-uri what_methods wirble bond).each { |x| begin; require x; rescue LoadError => e; puts e.inspect; end }
+%w(rubygems hpricot irb/ext/save-history open-uri what_methods wirble bond interactive_editor).each { |x| begin; require x; rescue LoadError => e; puts e.inspect; end }
 
 Bond.start
 

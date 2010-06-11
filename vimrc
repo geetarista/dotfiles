@@ -7,7 +7,7 @@ set novisualbell  " No blinking
 set noerrorbells  " No noise
 set laststatus=2  " Always show status line
 set tabstop=2 " Use 2 spaces for tabs
-set smarttab " Authomatic indenting
+set smarttab " Automatic indenting
 set shiftwidth=2
 set autoindent
 set expandtab
@@ -46,6 +46,9 @@ set history=25 "Set how many commands to retain in history
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 map <leader>d :NERDTreeToggle<CR>
 
+" Toggle spell checking
+nmap <silent> <leader>s :set spell!<CR>
+
 set autoread "Set to auto read when a file is changed from the outside
 
 "ruby omnicomplete
@@ -72,3 +75,6 @@ set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
 
 au! BufRead,BufNewFile *.json setfiletype json
+
+" Duplicate visual selection
+vmap <C-d> y'>p
