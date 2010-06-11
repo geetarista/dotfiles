@@ -204,7 +204,7 @@ cocoa-mappings	cocoa.txt	/*cocoa-mappings*
 cocoa-suggested-plugins	cocoa.txt	/*cocoa-suggested-plugins*
 cocoa.txt	cocoa.txt	/*cocoa.txt*
 command-t	command-t.txt	/*command-t*
-command-t-author	command-t.txt	/*command-t-author*
+command-t-authors	command-t.txt	/*command-t-authors*
 command-t-commands	command-t.txt	/*command-t-commands*
 command-t-contents	command-t.txt	/*command-t-contents*
 command-t-donations	command-t.txt	/*command-t-donations*

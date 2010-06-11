@@ -4,11 +4,11 @@ SHELL = /bin/sh
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/robbyc/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/i686-darwin10.2.0
+topdir = /usr/local/lib/ruby/1.8/i686-darwin10.0.0
 hdrdir = $(topdir)
 VPATH = $(srcdir):$(topdir):$(hdrdir)
 exec_prefix = $(prefix)
-prefix = $(DESTDIR)/Users/robbyc/.rvm/rubies/ruby-1.8.7-p249
+prefix = $(DESTDIR)/usr/local
 sharedstatedir = $(prefix)/com
 mandir = $(datarootdir)/man
 psdir = $(docdir)
@@ -38,13 +38,13 @@ localstatedir = $(prefix)/var
 sitelibdir = $(sitedir)/$(ruby_version)
 
 CC = gcc
-LIBRUBY = $(LIBRUBY_A)
+LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = 
+LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static
 
 RUBY_EXTCONF_H = 
-CFLAGS   =  -fno-common -g -O2 -pipe -fno-common $(cflags) 
+CFLAGS   =  -fno-common -D_XOPEN_SOURCE=1  -fno-common -pipe -fno-common $(cflags) 
 INCFLAGS = -I. -I$(topdir) -I$(hdrdir) -I$(srcdir)
 DEFS     = 
 CPPFLAGS = -DHAVE_RUBY_H  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags)
@@ -59,10 +59,10 @@ EXEEXT =
 
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby
-arch = i686-darwin10.2.0
-sitearch = i686-darwin10.2.0
+arch = i686-darwin10.0.0
+sitearch = i686-darwin10.0.0
 ruby_version = 1.8
-ruby = /Users/robbyc/.rvm/rubies/ruby-1.8.7-p249/bin/ruby
+ruby = /usr/local/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
 MAKEDIRS = mkdir -p
@@ -86,7 +86,7 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS =   -ldl -lobjc  
+LIBS = $(LIBRUBYARG_SHARED)  -lpthread -ldl -lobjc  
 SRCS = ext.c match.c matcher.c
 OBJS = ext.o match.o matcher.o
 TARGET = ext
@@ -178,4 +178,4 @@ $(DLLIB): $(OBJS) Makefile
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-CFLAGS += -std=gnu99 -Wall -Wextra -Wno-unused-parameter
+CFLAGS += -std=c99 -Wall -Wextra -Wno-unused-parameter
