@@ -1,68 +1,76 @@
 set nocompatible " no vi compatibility
+
+" General settings
 set ruler " Show cursor position
 set number " Show line numbers
-compiler ruby " Enable compiler support for ruby
-set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:< " Show $ at end of line and trailing space as ~
 set novisualbell  " No blinking
 set noerrorbells  " No noise
+set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:< " Show $ at end of line and trailing space as ~
 set laststatus=2  " Always show status line
+set cursorline
+set autoread "Set to auto read when a file is changed from the outside
+set history=25 "Set how many commands to retain in history
+set showmatch " Show matching brackets.
+set mat=5 " Bracket blinking.
+set showbreak=…
+set wildignore=*.swo,*.swp,*.jpg,*.png,*.gif
+
+" Tabs
 set tabstop=2 " Use 2 spaces for tabs
 set smarttab " Automatic indenting
 set shiftwidth=2
 set autoindent
 set expandtab
-set backspace=2
+set backspace=2 " start,indent
+
+" Search
 set hlsearch " Highlighted search
 set incsearch " Highlight search string as you type
 set ignorecase " Make searches case-insensitive
 set whichwrap+=<,>,h,l
 syntax on "Syntax highlighting
-set cursorline
-let NERDTreeShowHidden=1
-set wildignore=*.swo,*.swp,*.jpg,*.png,*.gif
+
+" Typos
+nmap :W :w
+nmap :Q :q
+nmap :E :e
+nmap :Tabe :tabe
+nmap :Noh :noh
+
 let mapleader = ","
-map <leader>g :FuzzyFinderTextMate<CR>
-let g:mapleader = ","
+
+" FuzzyFinder
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FuzzyFinderFile<CR>
 map <leader>r :FuzzyFinderMruFile<CR>
+map <leader>g :FuzzyFinderTextMate<CR>
 map <leader>R :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>:exe ":echo 'rescan complete'"<CR>
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
+
+" Nerdtree
+let NERDTreeShowHidden=1
 map <leader>n :NERDTree<CR>
-map <leader>a :Ack<space>
+map <leader>d :NERDTreeToggle<CR>
+
 map <leader>v :sp ~/.vimrc<CR>
 map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-"Fast reloading of the .vimrc
-map <leader>s :source ~/.vim/.vimrc<cr>
-"Fast editing of .vimrc
-map <leader>e :e! ~/.vim/.vimrc<cr>
-"When .vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim/.vimrc
+nmap <leader>i :set list!<CR> " Shortcut to toggle list (i for invisibles)
 
-set history=25 "Set how many commands to retain in history
+vmap <C-d> y'>p " Duplicate visual selection
+
+" vimrc
+map <leader>s :source ~/.vim/.vimrc<cr> " Fast reloading of the .vimrc
+map <leader>e :e! ~/.vim/.vimrc<cr> " Fast editing of .vimrc
+autocmd! bufwritepost vimrc source ~/.vim/.vimrc " When .vimrc is edited, reload it
 
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
-map <leader>d :NERDTreeToggle<CR>
 
-" Toggle spell checking
-nmap <silent> <leader>s :set spell!<CR>
+nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
 
-set autoread "Set to auto read when a file is changed from the outside
-
-"ruby omnicomplete
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-"improve autocomplete menu color
-"highlight Pmenu ctermbg=238 gui=bold
-
-autocmd BufRead,BufNewFile Gemfile set filetype=Gemfile
-
-filetype on
-filetype plugin indent on " load filetype plugins/indent settings
+" Ack function
+map <leader>a :Ack<space>
 
 function! AckGrep(command)
   cexpr system("ack -a" . a:command)
@@ -71,10 +79,18 @@ endfunction
 
 command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
 
-set showmatch " Show matching brackets.
-set mat=5 " Bracket blinking.
+" Language-specific
+compiler ruby " Enable compiler support for ruby
+
+"ruby omnicomplete
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+autocmd BufRead,BufNewFile Gemfile set filetype=Gemfile
+
+filetype on
+filetype plugin indent on " load filetype plugins/indent settings
 
 au! BufRead,BufNewFile *.json setfiletype json
-
-" Duplicate visual selection
-vmap <C-d> y'>p
