@@ -3,7 +3,10 @@ source ~/.bash_completion
 complete -C ~/.rake_completion -o default rake
 complete -C ~/.capistrano_completion -o default capistrano
 
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s ~/.rvm/scripts/rvm ]]; then
+  source ~/.rvm/scripts/rvm
+  source $rvm_path/scripts/completion
+fi
 
 rvm default
 
