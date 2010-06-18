@@ -33,6 +33,7 @@
   whitespace = nowarn
 [alias]
   unadd = reset HEAD
+  undo = reset --soft HEAD^
   pulldiff = diff HEAD^ HEAD
 [merge]
   tool = opendiff
