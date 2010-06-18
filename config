@@ -64,4 +64,4 @@ GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;0m\]"
 
-PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(__git_ps1 "[%s]")$WHITE\$ "
+PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(~/.rvm/bin/rvm-prompt) \$(__git_ps1 "[%s]")$WHITE\$ "
