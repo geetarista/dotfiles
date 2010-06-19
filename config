@@ -1,5 +1,6 @@
 source ~/.git_completion
 source ~/.bash_completion
+source ~/.ssh_completion
 complete -C ~/.rake_completion -o default rake
 complete -C ~/.capistrano_completion -o default capistrano
 
