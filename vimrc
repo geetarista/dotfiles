@@ -16,6 +16,7 @@ set autoread "Set to auto read when a file is changed from the outside
 set history=25 "Set how many commands to retain in history
 set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
+set linebreak
 set showbreak=…
 set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
 
