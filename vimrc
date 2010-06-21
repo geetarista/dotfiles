@@ -98,6 +98,9 @@ nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
 
 map <leader>a :Ack<space> " Ack function
 
+" Update help tags
+map <leader>h :helpt ~/.vim/doc/<CR>
+
 compiler ruby " Enable compiler support for ruby
 
 "ruby omnicomplete
