@@ -75,9 +75,9 @@ nmap > >>
 nmap < <<
 
 " search next/previous -- center in page
-nmap n nzz
-nmap N Nzz
-nmap * *Nzz
+" nmap n nzz
+" nmap N Nzz
+" nmap * *Nzz
 
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
