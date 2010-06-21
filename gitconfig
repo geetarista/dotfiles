@@ -46,7 +46,7 @@
   unadd = reset HEAD
   undo = reset --soft HEAD^
   pulldiff = diff HEAD^ HEAD
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   l1 = log --pretty=oneline --abbrev-commit --decorate
   lp = log -p
 [merge]
