@@ -16,13 +16,14 @@ set autoread "Set to auto read when a file is changed from the outside
 set history=25 "Set how many commands to retain in history
 set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
-set linebreak
-set showbreak=…
+set linebreak " Break lines at whole words only
+set showbreak=… " Visually differentiate a wrapped line from others
 set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
 
 " Do not use swapfiles or backup since writebackup is used
-set nobackup
-set noswapfile
+" writebackup is still used, so a copy is always kept in memory
+set nobackup " Do not write backup files to disk
+set noswapfile " Do not use swapfiles (they have trouble with large files)
 
 " Tabs
 set tabstop=2 " Use 2 spaces for tabs
@@ -78,10 +79,10 @@ au BufWinEnter ?* silent loadview " automatically load folds silently
 nmap > >>
 nmap < <<
 
-" search next/previous -- center in page
-" nmap n nzz
-" nmap N Nzz
-" nmap * *Nzz
+" search next/previous -- center in page (similar to using 'set scroloff=999')
+nmap n nzz
+nmap N Nzz
+nmap * *Nzz
 
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
