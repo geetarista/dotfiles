@@ -20,6 +20,10 @@ set linebreak
 set showbreak=…
 set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
 
+" Do not use swapfiles or backup since writebackup is used
+set nobackup
+set noswapfile
+
 " Tabs
 set tabstop=2 " Use 2 spaces for tabs
 set smarttab " Automatic indenting
