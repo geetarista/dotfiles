@@ -6,7 +6,7 @@ syntax on "Syntax highlighting
 
 " General settings
 set ruler " Show cursor position
-set number " Show line numbers
+set number " Show line and column numbers
 set novisualbell  " No blinking
 set noerrorbells  " No noise
 set lcs=tab:\▸\ ,eol:¬,trail:~,extends:>,precedes:< " Symbols when viewing invisibles
@@ -20,6 +20,10 @@ set linebreak " Break lines at whole words only
 set showbreak=… " Visually differentiate a wrapped line from others
 set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
 set cmdheight=2 " Show two lines in the status bar
+set iskeyword+=_,$,@,%,#,-
+set lazyredraw " Do not redraw while running macros (faster)
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set foldmethod=indent " indent-sensitive folding
 
 " Do not use swapfiles or backup since writebackup is used
 " writebackup is still used, so a copy is always kept in memory
@@ -44,8 +48,7 @@ set backspace=2 " start,indent
 " Search
 set hlsearch " Highlighted search
 set incsearch " Highlight search string as you type
-set ignorecase " Make searches case-insensitive
-set whichwrap+=<,>,h,l
+set whichwrap+=<,>,h,l " allow backspace and cursor keys to cross line boundaries
 
 " Typos
 nmap :W :w
@@ -91,6 +94,19 @@ nmap < <<
 nmap n nzz
 nmap N Nzz
 nmap * *Nzz
+
+" Splits
+"" Window
+nmap <leader>sw<left>  :topleft  vnew<CR>
+nmap <leader>sw<right> :botright vnew<CR>
+nmap <leader>sw<up>    :topleft  new<CR>
+nmap <leader>sw<down>  :botright new<CR>
+
+"" Buffer
+nmap <leader>s<left>  :leftabove  vnew<CR>
+nmap <leader>s<right> :rightbelow vnew<CR>
+nmap <leader>s<up>    :leftabove  new<CR>
+nmap <leader>s<down>  :rightbelow new<CR>
 
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
