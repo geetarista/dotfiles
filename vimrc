@@ -19,6 +19,7 @@ set mat=5 " Bracket blinking.
 set linebreak " Break lines at whole words only
 set showbreak=… " Visually differentiate a wrapped line from others
 set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
+set cmdheight=2 " Show two lines in the status bar
 
 " Do not use swapfiles or backup since writebackup is used
 " writebackup is still used, so a copy is always kept in memory
