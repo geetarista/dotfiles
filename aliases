@@ -28,3 +28,11 @@ alias tm='top -o vsize' # memory
 function gc() { 
     git commit -v -a -m "$*"
 }
+
+alias m='mvim'
+
+alias dfh='df -h'
+
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../..'
