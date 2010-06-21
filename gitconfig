@@ -32,8 +32,24 @@
 [apply]
   whitespace = nowarn
 [alias]
+  a = add
+  c = commit
+  s = status
+  ca = commit -a
+  co = checkout
+  cob = checkout -b
+  cor = checkout -t
+  b = branch
+  m = merge
+  d = diff
+  p = push
   unadd = reset HEAD
   undo = reset --soft HEAD^
   pulldiff = diff HEAD^ HEAD
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  l1 = log --pretty=oneline --abbrev-commit --decorate
+  lp = log -p
 [merge]
-  tool = opendiff
+  tool = vim # opendiff
+[github]
+  user = geetarista
