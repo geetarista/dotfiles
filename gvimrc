@@ -8,3 +8,4 @@ set guioptions=egmrt " Tabs, grey menu items, menu bar, right scrollbar, tearoff
 set guioptions-=T " No toolbar
 set showtabline=2
 set guifont=Menlo\ Regular:h12
+set fuoptions=maxvert,maxhorz
