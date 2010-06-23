@@ -108,7 +108,7 @@ nmap <leader>s<right> :rightbelow vnew<CR>
 nmap <leader>s<up>    :leftabove  new<CR>
 nmap <leader>s<down>  :rightbelow new<CR>
 
-map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
+map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > .tmptags; mv .tmptags .tags<CR>:exe ":echo 'tags generated'"<CR>
 
 " Spelling/dictionary
 nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
