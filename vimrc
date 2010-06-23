@@ -11,7 +11,7 @@ set noerrorbells  " No noise
 set lcs=tab:\▸\ ,eol:¬,trail:~,extends:>,precedes:< " Symbols when viewing invisibles
 set laststatus=2  " Always show status line
 set cursorline
-set autoread "Set to auto read when a file is changed from the outside
+" set autoread "Set to auto read when a file is changed from the outside
 set history=25 "Set how many commands to retain in history
 set showmatch " Show matching brackets.
 set mat=5 " Bracket blinking.
