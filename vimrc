@@ -40,9 +40,9 @@ set noswapfile " Do not use swapfiles (they have trouble with large files)
 " Tabs
 set tabstop=2 " Use 2 spaces for tabs
 set smarttab " Automatic indenting
-set shiftwidth=2
-set autoindent
-set expandtab
+set shiftwidth=2 " sets spaces used for indention
+set autoindent " continue indention from previous line
+set expandtab " tab key inserts spaces instead of tabs
 set backspace=2 " start,indent
 
 " Search
