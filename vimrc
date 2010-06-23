@@ -1,6 +1,5 @@
 set nocompatible " no vi compatibility
 
-filetype on
 filetype plugin indent on " load filetype plugins/indent settings
 syntax on "Syntax highlighting
 
