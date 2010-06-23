@@ -23,7 +23,7 @@
   remote = origin
   merge = refs/heads/master
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/robbyc/.gitignore
   editor = mvim -w
 [push]
   default = matching
