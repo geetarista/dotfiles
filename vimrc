@@ -132,6 +132,9 @@ compiler ruby " Enable compiler support for ruby
 " NERDCommenter
 let g:NERDSpaceDelims=1
 
+" Snipmate
+let g:snippets_dir='~/.vim/snippets'
+
 "ruby omnicomplete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
