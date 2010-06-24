@@ -63,7 +63,6 @@
 :NERDTreeMirror	NERD_tree.txt	/*:NERDTreeMirror*
 :NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
 :RmVimball	pi_vimball.txt	/*:RmVimball*
-:Snippet	snippets_emu.txt	/*:Snippet*
 :TlistAddFiles	taglist.txt	/*:TlistAddFiles*
 :TlistAddFilesRecursive	taglist.txt	/*:TlistAddFilesRecursive*
 :TlistClose	taglist.txt	/*:TlistClose*
@@ -83,8 +82,6 @@
 :UseVimball	pi_vimball.txt	/*:UseVimball*
 :VimballList	pi_vimball.txt	/*:VimballList*
 Align-copyright	Align.txt	/*Align-copyright*
-CreateBundleSnippet	snippets_emu.txt	/*CreateBundleSnippet*
-CreateSnippet	snippets_emu.txt	/*CreateSnippet*
 ExtractSnips()	snipMate.txt	/*ExtractSnips()*
 ExtractSnipsFile()	snipMate.txt	/*ExtractSnipsFile()*
 Filename()	snipMate.txt	/*Filename()*
@@ -244,7 +241,6 @@ alignmap-tt	Align.txt	/*alignmap-tt*
 alignmap-t~	Align.txt	/*alignmap-t~*
 alignmaps	Align.txt	/*alignmaps*
 alignusage	Align.txt	/*alignusage*
-basic-snippet	snippets_emu.txt	/*basic-snippet*
 cocoa	cocoa.txt	/*cocoa*
 cocoa-author	cocoa.txt	/*cocoa-author*
 cocoa-commands	cocoa.txt	/*cocoa-commands*
@@ -274,7 +270,6 @@ command-t-website	command-t.txt	/*command-t-website*
 command-t-wildignore	command-t.txt	/*command-t-wildignore*
 command-t.txt	command-t.txt	/*command-t.txt*
 config/rails.vim	rails.txt	/*config\/rails.vim*
-creating-snippets	snippets_emu.txt	/*creating-snippets*
 cs	surround.txt	/*cs*
 ds	surround.txt	/*ds*
 g:CommandTAcceptSelectionMap	command-t.txt	/*g:CommandTAcceptSelectionMap*
@@ -345,7 +340,6 @@ leopard-security-alert	cocoa.txt	/*leopard-security-alert*
 list-snippets	snipMate.txt	/*list-snippets*
 macros/rails.vim	rails.txt	/*macros\/rails.vim*
 multi_snip	snipMate.txt	/*multi_snip*
-named-tags	snippets_emu.txt	/*named-tags*
 pi_getscript.txt	pi_getscript.txt	/*pi_getscript.txt*
 pi_vimball.txt	pi_vimball.txt	/*pi_vimball.txt*
 rails	rails.txt	/*rails*
@@ -486,21 +480,6 @@ rails-template-types	rails.txt	/*rails-template-types*
 rails-type-navigation	rails.txt	/*rails-type-navigation*
 rails-vim-integration	rails.txt	/*rails-vim-integration*
 rails.txt	rails.txt	/*rails.txt*
-snip-advanced-tag-commands	snippets_emu.txt	/*snip-advanced-tag-commands*
-snip-buffer-specific	snippets_emu.txt	/*snip-buffer-specific*
-snip-bundles	snippets_emu.txt	/*snip-bundles*
-snip-contact-details	snippets_emu.txt	/*snip-contact-details*
-snip-contributors	snippets_emu.txt	/*snip-contributors*
-snip-detailed-explanations	snippets_emu.txt	/*snip-detailed-explanations*
-snip-elem-delimiter	snippets_emu.txt	/*snip-elem-delimiter*
-snip-ftplugin	snippets_emu.txt	/*snip-ftplugin*
-snip-limitations	snippets_emu.txt	/*snip-limitations*
-snip-menu	snippets_emu.txt	/*snip-menu*
-snip-remap-key	snippets_emu.txt	/*snip-remap-key*
-snip-snippet-commands	snippets_emu.txt	/*snip-snippet-commands*
-snip-special-vars	snippets_emu.txt	/*snip-special-vars*
-snip-start-end-tags	snippets_emu.txt	/*snip-start-end-tags*
-snip-tag-name-syntax	snippets_emu.txt	/*snip-tag-name-syntax*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
 snipMate-${#:}	snipMate.txt	/*snipMate-${#:}*
@@ -521,14 +500,8 @@ snipMate-settings	snipMate.txt	/*snipMate-settings*
 snipMate-usage	snipMate.txt	/*snipMate-usage*
 snipMate.txt	snipMate.txt	/*snipMate.txt*
 snippet	snipMate.txt	/*snippet*
-snippet-commands	snippets_emu.txt	/*snippet-commands*
 snippet-syntax	snipMate.txt	/*snippet-syntax*
 snippets	snipMate.txt	/*snippets*
-snippets_emu-bugs	snippets_emu.txt	/*snippets_emu-bugs*
-snippets_emu-features	snippets_emu.txt	/*snippets_emu-features*
-snippets_emu-options	snippets_emu.txt	/*snippets_emu-options*
-snippets_emu-troubleshooting	snippets_emu.txt	/*snippets_emu-troubleshooting*
-snippets_emu.txt	snippets_emu.txt	/*snippets_emu.txt*
 surround	surround.txt	/*surround*
 surround-author	surround.txt	/*surround-author*
 surround-customizing	surround.txt	/*surround-customizing*
