@@ -125,7 +125,7 @@ set dictionary+=/usr/share/dict/words
 map <leader>a :Ack<space> " Ack function
 
 " Update help tags
-map <leader>h :helpt ~/.vim/doc/<CR>
+map <leader>h :call pathogen#helptags()<CR>
 
 compiler ruby " Enable compiler support for ruby
 
