@@ -70,16 +70,15 @@ let NERDTreeShowHidden=1
 map <leader>n :NERDTree<CR>
 map <leader>d :NERDTreeToggle<CR>
 
-map <leader>v :sp ~/.vimrc<CR>
-map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
 nmap <leader>i :set list!<CR> " Shortcut to toggle list (i for invisibles)
 
 vmap <C-d> y'>p " Duplicate visual selection
 
 " vimrc
-map <leader>s :source ~/.vimrc<cr> " Fast reloading of the .vimrc
-map <leader>e :e! ~/.vimrc<cr> " Fast editing of .vimrc
+" Fast editing of .vimrc
+map <leader>v :sp ~/.vimrc<CR>
+" Fast reloading of the .vimrc
+map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 autocmd! bufwritepost vimrc source ~/.vimrc " When .vimrc is edited, reload it
 
 " Folds
@@ -108,6 +107,7 @@ nmap <leader>s<right> :rightbelow vnew<CR>
 nmap <leader>s<up>    :leftabove  new<CR>
 nmap <leader>s<down>  :rightbelow new<CR>
 
+" ctags
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > .tmptags; mv .tmptags .tags<CR>:exe ":echo 'tags generated'"<CR>
 
 " Spelling/dictionary
