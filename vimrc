@@ -8,7 +8,7 @@ set ruler " Show cursor position
 set number " Show line and column numbers
 set novisualbell  " No blinking
 set noerrorbells  " No noise
-set lcs=tab:\▸\ ,eol:¬,trail:~,extends:>,precedes:< " Symbols when viewing invisibles
+set lcs=nbsp:•,tab:\▸\ ,eol:¬,trail:~,extends:>,precedes:< " Symbols when viewing invisibles
 set laststatus=2  " Always show status line
 set cursorline
 " set autoread "Set to auto read when a file is changed from the outside
