@@ -36,3 +36,5 @@ alias dfh='df -h'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../..'
+
+alias bi='bundle install'
