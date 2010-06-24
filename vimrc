@@ -8,13 +8,14 @@ set ruler " Show cursor position
 set number " Show line and column numbers
 set novisualbell  " No blinking
 set noerrorbells  " No noise
+set t_vb= " No noise in shell
 set lcs=nbsp:•,tab:\▸\ ,eol:¬,trail:~,extends:>,precedes:< " Symbols when viewing invisibles
 set laststatus=2  " Always show status line
 set cursorline
 " set autoread "Set to auto read when a file is changed from the outside
 set history=25 "Set how many commands to retain in history
 set showmatch " Show matching brackets.
-set mat=5 " Bracket blinking.
+set mat=5 " Bracket blinking length (tenths of a second)
 set linebreak " Break lines at whole words only
 set showbreak=… " Visually differentiate a wrapped line from others
 set wildignore+=*.swo,*.swp,*.jpg,*.png,*.gif,.git,log/*,vendor/*,tmp/*,script/*
@@ -49,6 +50,7 @@ set backspace=2 " start,indent
 set hlsearch " Highlighted search
 set incsearch " Highlight search string as you type
 set whichwrap+=<,>,h,l " allow backspace and cursor keys to cross line boundaries
+map <leader><Esc> :noh<CR>
 
 " Typos
 nmap :W :w
@@ -105,6 +107,11 @@ nmap <leader>s<left>  :leftabove  vnew<CR>
 nmap <leader>s<right> :rightbelow vnew<CR>
 nmap <leader>s<up>    :leftabove  new<CR>
 nmap <leader>s<down>  :rightbelow new<CR>
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " ctags
 map <leader>e :silent :! ctags --recurse --sort=yes -f .tags; sort tags > .tmptags; mv .tmptags .tags<CR>:exe ":echo 'tags generated'"<CR>
