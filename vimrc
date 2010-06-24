@@ -59,11 +59,10 @@ nmap :Noh :noh
 
 let mapleader = ","
 
-" command-t
-let g:CommandTAlwaysShowDotFiles=1
-let g:CommandTMatchWindowAtTop=1
-let g:CommandTMaxHeight=15
-map <leader>R :CommandTFlush<CR>
+" fuzzy finder
+" gem install fuzzy_file_finder to work
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>R :FuzzyFinderTextMateRefreshFiles<CR>
 
 " Nerdtree
 let NERDTreeShowHidden=1
@@ -108,7 +107,7 @@ nmap <leader>s<up>    :leftabove  new<CR>
 nmap <leader>s<down>  :rightbelow new<CR>
 
 " ctags
-map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > .tmptags; mv .tmptags .tags<CR>:exe ":echo 'tags generated'"<CR>
+map <leader>e :silent :! ctags --recurse --sort=yes -f .tags; sort tags > .tmptags; mv .tmptags .tags<CR>:exe ":echo 'tags generated'"<CR>
 
 " Spelling/dictionary
 nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
