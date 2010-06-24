@@ -1,5 +1,7 @@
 set nocompatible " no vi compatibility
 
+call pathogen#runtime_append_all_bundles()
+
 filetype plugin indent on " load filetype plugins/indent settings
 syntax on "Syntax highlighting
 
