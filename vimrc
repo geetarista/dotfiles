@@ -123,7 +123,7 @@ map <leader>e :silent :! ctags --recurse --sort=yes -f .tags; sort tags > .tmpta
 nmap <silent> <leader>s :set spell!<CR> " Toggle spell checking
 set dictionary+=/usr/share/dict/words
 
-map <leader>a :Ack<space> " Ack function
+map <leader>A :Ack<space> " Ack function
 
 " Update help tags
 map <leader>h :call pathogen#helptags()<CR>
