@@ -139,6 +139,8 @@ let g:snippets_dir='~/.vim/snippets'
 " Easily find a word
 map ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
+let g:showmarks_enable=0
+
 "ruby omnicomplete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
