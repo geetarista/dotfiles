@@ -8,7 +8,10 @@ WARNING: Existing files are deleted during installation. Use at your own risk.
 
 To use, just run the following commands:
 
+  gem install fuzzy_file_finder
+
   git clone git://github.com/geetarista/dotfiles.git
+  git submodule update --init
 
   cd dotfiles
 
