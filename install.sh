@@ -9,7 +9,7 @@ for name in *; do
 
     if [ -d $target ]; then
       rm -rf $target
-    else
+    elif [ -a $target ]; then
       rm $target
     fi
 
