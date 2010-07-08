@@ -22,6 +22,14 @@ mkcd () {
   cd "$*"
 }
 
+rmdsstore() {
+  if [ -z "$1" ]; then
+    find . -name ".DS_Store" -depth -exec rm {} \;
+  else
+    find "$1" -name ".DS_Store" -depth -exec rm {} \;
+  fi
+}
+
 extract () {
   if [ -f $1 ] ; then
     case $1 in
