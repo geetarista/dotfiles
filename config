@@ -30,6 +30,10 @@ rmdsstore() {
   fi
 }
 
+dnsflush() {
+  dscacheutil -flushcache
+}
+
 extract () {
   if [ -f $1 ] ; then
     case $1 in
