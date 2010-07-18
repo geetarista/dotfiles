@@ -116,6 +116,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+nmap <leader>x :!
+
 " ctags
 map <leader>e :silent :! ctags --recurse --sort=yes -f .tags; sort tags > .tmptags; mv .tmptags .tags<CR>:exe ":echo 'tags generated'"<CR>
 
