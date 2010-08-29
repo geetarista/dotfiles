@@ -7,9 +7,7 @@ for name in *; do
   if [ ! $name == "README.rdoc" -a ! $name == "LICENSE" -a ! $name == "install.sh" ]; then
     target="$HOME/.$name"
 
-    if [ -d $target ]; then
-      rm -rf $target
-    elif [ -a $target ]; then
+    if [ -h $target ]; then
       rm $target
     fi
 
