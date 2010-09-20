@@ -5,7 +5,15 @@ function cdw() {
 function daylog() {
   git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs -0 ruby -e "puts ARGV.to_s.split(/ \n/).join(' ')"
 }
- 
+
+function volume() {
+  if [[ $1 ]]; then
+    sudo osascript -e "set Volume $1"
+  else
+    echo "Please enter a number from 0 to 10."
+  fi
+}
+
 alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
 alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
 
