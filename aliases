@@ -50,3 +50,5 @@ alias be='bundle exec'
 alias bu='bundle update'
 alias bl='bundle lock'
 alias bul='bundle unlock'
+
+alias dnsflush='dscacheutil -flushcache'
