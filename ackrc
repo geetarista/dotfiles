@@ -4,19 +4,21 @@
 --follow
 --group
 --all
+--smart-case
 -a
+
 --ignore-dir=coverage
+--ignore-dir=doc
 --ignore-dir=log
 --ignore-dir=logs
 --ignore-dir=tmp
 --ignore-dir=vendor
 
-# Keep the following three together
 --type-set
 --type-set=haml=.haml
 --type-set=sass=.sass
 --type-set=cucumber=.feature
---type-add=ruby=.rake,.builder
-
---smart-case
-# --pager=less -r
+--type-add=ruby=.rake,.builder,.haml,.rsel
+--type-add=css=.sass,.less
+--type-add=js=.js.erb,.coffee
+--type-add=html=.html.erb,.html.haml
