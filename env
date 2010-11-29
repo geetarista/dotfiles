@@ -8,3 +8,5 @@ export EDITOR="mvim -f"
 export GIT_EDITOR="mvim -f"
 
 export RUBYOPT=rubygems
+
+export AUTOFEATURE=true
