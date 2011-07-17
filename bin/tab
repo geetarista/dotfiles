@@ -1,0 +1,14 @@
+#!/bin/bash
+
+/usr/bin/osascript 2>/dev/null <<EOF
+activate application "Terminal"
+tell application "System Events"
+  keystroke "t" using {command down}
+end tell
+tell application "Terminal"
+  activate
+  do script "cd $(pwd); $1" in window 1
+end tell
+return
+EOF
+
