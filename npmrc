@@ -1,0 +1,3 @@
+; https://github.com/isaacs/npm/blob/master/doc/config.md
+
+browser = google-chrome
