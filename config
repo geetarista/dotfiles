@@ -83,3 +83,6 @@ YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;0m\]"
 
 PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(~/.rvm/bin/rvm-prompt u) \$(__git_ps1 "[%s]")$WHITE\$ "
+
+# vim: set ft=sh:
+
