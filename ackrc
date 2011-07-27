@@ -3,9 +3,7 @@
 --context=1
 --follow
 --group
---all
 --smart-case
--a
 
 --ignore-dir=coverage
 --ignore-dir=doc
@@ -22,3 +20,4 @@
 --type-add=css=.sass,.less
 --type-add=js=.js.erb,.coffee
 --type-add=html=.html.erb,.html.haml
+
