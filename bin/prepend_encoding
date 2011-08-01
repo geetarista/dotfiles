@@ -1,0 +1,5 @@
+for file in $@; do 
+  ruby -e 'lines = readlines; lines.unshift("# coding: utf-8") unless !lines.first or lines.first.include?("# coding"); puts lines' $file > $file.2; 
+  rm $file; 
+  mv $file.2 $file; 
+done
