@@ -60,3 +60,6 @@
   tool = vim # opendiff
 [github]
   user = geetarista
+
+# vim: set ft=sh:
+
