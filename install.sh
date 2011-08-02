@@ -9,6 +9,8 @@ for name in *; do
 
     if [ -h $target ]; then
       rm $target
+    elif [ -d $target ]; then
+      rm -rf $target
     fi
 
     ln -s "$PWD/$name" "$target"
