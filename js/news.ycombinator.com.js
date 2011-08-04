@@ -1,6 +1,6 @@
 $(function() {
   // move form to header
-  $('form:last')
+  $('span.yclinks').parent().find('form')
     .css({ 'color': 'black', 'position': 'absolute', 'right': '400px' })
     .prependTo('body');
 });
