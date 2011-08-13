@@ -1,6 +1,20 @@
 # Set PATH, CDPATH, EDITOR, etc.
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:~/.bin:/usr/local/mongodb/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/share/npm/bin:/usr/local/share/python:$PATH"
+
+export PATH="/opt/local/bin:$PATH"
+export PATH="/opt/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="~/.bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="/usr/X11/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/share/python:$PATH"
+
 export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
+
 export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 
 export EDITOR="mvim -f"
