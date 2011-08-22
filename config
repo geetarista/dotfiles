@@ -1,4 +1,4 @@
-source ~/.git_completion
+source /usr/local/etc/bash_completion.d/git-completion.bash
 source ~/.bash_completion
 source ~/.ssh_completion
 complete -C ~/.rake_completion -o default rake
