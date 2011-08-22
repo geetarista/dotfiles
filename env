@@ -1,5 +1,5 @@
 # Set PATH, CDPATH, EDITOR, etc.
-
+export PATH=""
 export PATH="/opt/local/bin:$PATH"
 export PATH="/opt/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -12,6 +12,8 @@ export PATH="/sbin:$PATH"
 export PATH="/usr/X11/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
+export PATH="~/.rbenv/bin:$PATH"
+export PATH="~/.rbenv/shims:$PATH"
 
 export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 

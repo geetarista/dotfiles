@@ -4,13 +4,6 @@ source ~/.ssh_completion
 complete -C ~/.rake_completion -o default rake
 complete -C ~/.capistrano_completion -o default capistrano
 
-if [[ -s ~/.rvm/scripts/rvm ]]; then
-  source ~/.rvm/scripts/rvm
-  source $rvm_path/scripts/completion
-fi
-
-rvm default
-
 function ps? {
   ps aux | grep "$@"
 }
@@ -82,7 +75,7 @@ GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;0m\]"
 
-PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(~/.rvm/bin/rvm-prompt u) \$(__git_ps1 "[%s]")$WHITE\$ "
+PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(__git_ps1 "[%s]")$WHITE $ "
 
 # vim: set ft=sh:
 
