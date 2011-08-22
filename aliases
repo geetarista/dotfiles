@@ -1,3 +1,11 @@
+# https://gist.github.com/910470
+if [ -x `which brew` ]; then
+  macvim_version=`brew list --versions macvim | sed 's/.* \([0-9\.\-]*\)$/\1/'`
+  if [ -n "${macvim_version}" ]; then
+    alias vim=`brew --prefix`/Cellar/macvim/${macvim_version}/MacVim.app/Contents/MacOS/Vim
+  fi
+fi
+
 function cdw() {
   cd ~/workspace/$1;
 }
@@ -21,13 +29,13 @@ alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld
 alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
 
 alias cgrep='grep --color=auto'
- 
+
 alias reload='. ~/.bashrc'
 
 alias k9="killall -9"
 
-function killnamed () { 
-  ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill 
+function killnamed () {
+  ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill
 }
 
 alias o='open . &'
@@ -35,7 +43,7 @@ alias o='open . &'
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
-function gc() { 
+function gc() {
     git commit -v -a -m "$*"
 }
 
