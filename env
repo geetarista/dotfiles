@@ -24,3 +24,5 @@ export GIT_EDITOR="mvim -f"
 
 export AUTOFEATURE=true
 
+# vim: set ft=sh:
+
