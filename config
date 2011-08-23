@@ -23,7 +23,7 @@ rmdsstore() {
   fi
 }
 
-dnsflush() {
+function dnsflush() {
   dscacheutil -flushcache
 }
 
