@@ -1,4 +1,3 @@
-# Set PATH, CDPATH, EDITOR, etc.
 export PATH=""
 export PATH="/opt/local/bin:$PATH"
 export PATH="/opt/local/sbin:$PATH"
@@ -23,9 +22,5 @@ export EDITOR="mvim -f"
 
 export GIT_EDITOR="mvim -f"
 
-# export RUBYOPT=rubygems
-
 export AUTOFEATURE=true
-
-export JRUBY_INVOCATION="$(readlink "$(which celerity_jruby)")"
 
