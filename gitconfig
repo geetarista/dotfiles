@@ -1,10 +1,10 @@
 [user]
-	name = Robby Colvin
+  name = Robby Colvin
   email = geetarista@gmail.com
 [color]
   diff = auto
   status = auto
-  branch = auto  
+  branch = auto
   ui = auto
 [color "branch"]
   current = yellow
@@ -23,7 +23,7 @@
   remote = origin
   merge = refs/heads/master
 [core]
-	excludesfile = /Users/robbyc/.gitignore
+  excludesfile = ~/.gitignore
   editor = mvim -w
 [push]
   default = matching
@@ -60,6 +60,19 @@
   tool = vim # opendiff
 [github]
   user = geetarista
+[init]
+  templatedir = ~/.git_template
+[url "git@github.com:"]
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+  insteadOf = "github:"
+[url "git@gist.github.com:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
 
 # vim: set ft=sh:
-
