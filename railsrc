@@ -1,57 +1,13 @@
 #!/usr/bin/ruby
- 
-def change_log(stream)
-  ActiveRecord::Base.logger = Logger.new(stream)
-  ActiveRecord::Base.clear_active_connections!
-end
- 
-def show_log
-  change_log(STDOUT)
-end
- 
-def hide_log
-  change_log(nil)
-end
 
-rails_env = ENV['RAILS_ENV']
-project = File.basename(Dir.pwd)
- 
-# Props to http://quotedprintable.com/2007/9/13/my-irbrc for some of the hot IRB.conf settings.
-IRB.conf[:PROMPT] ||= {}
-IRB.conf[:PROMPT][:RAILS] = {
-  :PROMPT_I => "#{project}> ",
-  :PROMPT_S => "#{project}* ",
-  :PROMPT_C => "#{project}? ",
-  :RETURN => "=> %s\n"
-}
-IRB.conf[:PROMPT_MODE] = :RAILS
- 
-# Called after the irb session is initialized and Rails has been loaded (props: Mike Clark).
-# IRB.conf[:IRB_RC] = Proc.new do
-#   # Print AR logging to the console
-#   ActiveRecord::Base.logger = Logger.new(STDOUT)
-#   # Require all models so we can tab complete them right away
-#   # silence_warnings { Dir[Dir.pwd + "/app/models/**/*.rb"].entries.each { |x| require x } }
+# https://github.com/cldwalker/hirb/issues/46#issuecomment-1870823
+# Pry.config.print = proc do |output, value|
+#   Hirb::View.view_or_page_output(value) || Pry::DEFAULT_PRINT.call(output, value)
 # end
- 
-# MySQL shell output wraps like shit, so I hacked together this beast..
-def describe(model)
-  puts model.columns.group_by(&:type).map { |t,g| g.sort_by(&:name).map { |c| "#{c.name.ljust model.column_names.map(&:size).max}:#{c.type}" } }
-end
- 
-# >> Video 1
-# => #<Video ...>
-def method_missing msg, *args, &block
-  model = begin;
-    Object.const_get msg
-  rescue NameError
-  end
-  
-  if model and model.respond_to?(:descends_from_active_record?) and model.descends_from_active_record?
-    model.find args.first
-  else
-    super
-  end
-end
- 
 
+# Hirb.enable
+
+# Auto-completion for Mongoid models
+if defined? Mongoid
+	silence_warnings { Dir[Dir.pwd + "/app/models/**/*.rb"].entries.each { |x| require x }; nil }
+end
