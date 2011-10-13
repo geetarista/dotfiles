@@ -1,9 +1,7 @@
 # http://lucapette.com/pry/pry-everywhere/
 
-# vim FTW
 Pry.config.editor = "gvim --nofork"
-
-# My pry is polite
+Pry.config.pager = false
 Pry.hooks = { :after_session => proc { puts "bye-bye" } }
 
 # Prompt with ruby version
