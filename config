@@ -4,6 +4,8 @@ source ~/.ssh_completion
 complete -C ~/.rake_completion -o default rake
 complete -C ~/.capistrano_completion -o default capistrano
 
+crontab ~/.crontab
+
 function ps? {
   ps aux | grep "$@"
 }
