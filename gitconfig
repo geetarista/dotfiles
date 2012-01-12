@@ -25,6 +25,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = mvim -w
+	quotepath = false
 [push]
   default = matching
 [pull]
