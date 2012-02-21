@@ -1,28 +1,3 @@
-# https://gist.github.com/910470
-if [ -x `which brew` ]; then
-  macvim_version=`brew list --versions macvim | sed 's/.* \([0-9\.\-]*\)$/\1/'`
-  if [ -n "${macvim_version}" ]; then
-    alias vim=`brew --prefix`/Cellar/macvim/${macvim_version}/MacVim.app/Contents/MacOS/Vim
-  fi
-fi
-alias v='vim'
-
-function cdw() {
-  cd ~/workspace/$1;
-}
-
-function daylog() {
-  git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs -0 ruby -e "puts ARGV.to_s.split(/ \n/).join(' ')"
-}
-
-function volume() {
-  if [[ $1 ]]; then
-    sudo osascript -e "set Volume $1"
-  else
-    echo "Please enter a number from 0 to 10."
-  fi
-}
-
 alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
 alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
 
@@ -35,23 +10,20 @@ alias reload='. ~/.bashrc'
 
 alias k9="killall -9"
 
-function killnamed () {
-  for i in `ps ax | grep $1| cut -d ' ' -f 1`; do
-    kill -9 $i
-  done
-  # ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill
-}
-
 alias o='open . &'
 
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
-function gc() {
-    git commit -v -a -m "$*"
-}
-
 alias m='mvim'
+# https://gist.github.com/910470
+if [ -x `which brew` ]; then
+  macvim_version=`brew list --versions macvim | sed 's/.* \([0-9\.\-]*\)$/\1/'`
+  if [ -n "${macvim_version}" ]; then
+    alias vim=`brew --prefix`/Cellar/macvim/${macvim_version}/MacVim.app/Contents/MacOS/Vim
+  fi
+fi
+alias v='vim'
 
 alias dfh='df -h'
 
@@ -68,4 +40,3 @@ alias bul='bundle unlock'
 alias dnsflush='dscacheutil -flushcache'
 
 # vim: set ft=sh:
-

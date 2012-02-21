@@ -1,0 +1,98 @@
+function cdw() {
+  cd ~/workspace/$1;
+}
+
+function daylog() {
+  git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs -0 ruby -e "puts ARGV.to_s.split(/ \n/).join(' ')"
+}
+
+function volume() {
+  if [[ $1 ]]; then
+    sudo osascript -e "set Volume $1"
+  else
+    echo "Please enter a number from 0 to 10."
+  fi
+}
+
+function ps? {
+  ps aux | grep "$@"
+}
+
+function gc {
+  git commit -vm "$*"
+}
+
+function gca {
+  git commit -vam "$*"
+}
+
+# https://gist.github.com/810859
+# $ gh-get https://github.com/defunkt/facebox/blob/master/src/facebox.js
+function gh-get {
+  curl -#O $(echo $1 | sed 's|blob/||' | sed 's|github.com|raw.github.com|')
+}
+
+# ghc (GitHub clone)
+# http://openmonkey.com/articles/2009/07/fast-github-clone-bash-function
+function ghc {
+  gh_url=${1:-`pbpaste`}
+  co_dir=${HOME}/code/src/$(echo $gh_url | sed -e 's/^git:\/\/github.com\///; s/\//-/; s/\.git$//')
+
+  if [ -d $co_dir ]; then
+    cd $co_dir && git pull origin master
+  else
+    git clone "${gh_url}" "${co_dir}" && cd "${co_dir}"
+  fi
+}
+
+# Grep directory listing.
+function lg {
+  ls -la | grep -e "$@";
+}
+
+function killnamed () {
+  for i in `ps ax | grep $1| cut -d ' ' -f 1`; do
+    kill -9 $i
+  done
+  # ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill
+}
+
+# mkdir, cd into it
+# http://onethingwell.org/post/586977440/mkcd-improved
+mkcd () {
+  mkdir -p "$*" && cd "$*"
+}
+
+rmdsstore() {
+  if [ -z "$1" ]; then
+    find . -name ".DS_Store" -depth -exec rm {} \;
+  else
+    find "$1" -name ".DS_Store" -depth -exec rm {} \;
+  fi
+}
+
+function dnsflush() {
+  dscacheutil -flushcache
+}
+
+extract () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2) tar xjf $1 ;;
+      *.tar.gz) tar xzf $1 ;;
+      *.bz2) bunzip2 $1 ;;
+      *.rar) unrar x $1 ;;
+      *.gz) gunzip $1 ;;
+      *.tar) tar xf $1 ;;
+      *.tbz2) tar xjf $1 ;;
+      *.tgz) tar xzf $1 ;;
+      *.zip) unzip $1 ;;
+      *.Z) uncompress $1 ;;
+      *) echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# vim: set ft=sh:
