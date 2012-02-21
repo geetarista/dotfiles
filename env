@@ -26,11 +26,6 @@ export GIT_EDITOR="subl" # "vim"
 
 export AUTOFEATURE=true
 
-export CC=/usr/bin/gcc-4.2
-export CPP=/usr/bin/cpp-4.2
-export CXX=/usr/bin/g++-4.2
-
-# export CC=gcc-4.2
+export CC=/usr/bin/clang
 
 # vim: set ft=sh:
-
