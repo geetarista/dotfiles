@@ -57,6 +57,7 @@
   l1d = log --oneline --decorate
   lp = log -p
   wd = diff --word-diff
+  sync = "!sync() { git fetch origin master; git rebase -p origin/$1; }; sync"
 [merge]
   tool = vim # opendiff
 [github]
