@@ -58,6 +58,7 @@
   lp = log -p
   wd = diff --word-diff
   sync = "!sync() { git fetch origin master; git rebase -p origin/$1; }; sync"
+  su = submodule update
 [merge]
   tool = vim # opendiff
 [github]
