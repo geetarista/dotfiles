@@ -2,7 +2,9 @@
 
 Pry.config.editor = "gvim --nofork"
 Pry.config.pager = false
-Pry.hooks = { :after_session => proc { puts "bye-bye" } }
+Pry.config.hooks.add_hook(:after_session, :say_bye) do
+  puts "bye-bye"
+end
 
 # Prompt with ruby version
 Pry.prompt = [proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
