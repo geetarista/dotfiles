@@ -23,7 +23,7 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 
 export EDITOR="subl" # "vim"
 
-export GIT_EDITOR="subl" # "vim"
+export GIT_EDITOR="mvim"
 
 export AUTOFEATURE=true
 
