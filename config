@@ -4,7 +4,7 @@ source ~/.ssh_completion
 complete -C ~/.rake_completion -o default rake
 complete -C ~/.capistrano_completion -o default capistrano
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+eval "$(rbenv init -)"
 
 crontab ~/.crontab
 
@@ -36,6 +36,12 @@ GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;0m\]"
 
-PS1="$GREEN\$(date +%H:%M) \w$YELLOW \$(~/.rvm/bin/rvm-prompt u) \$(__git_ps1 "[%s]")$WHITE\$ "
+ruby_version=$(rbenv version-name)
+case ${ruby_version%-*} in
+  1.9.3) ruby_version_string="❸" ;;
+  *)     ruby_version_string="system" ;;
+esac
+
+PS1="$GREEN\$(date +%H:%M) \w$YELLOW $ruby_version_string \$(__git_ps1 "[%s]")$WHITE\$ "
 
 # vim: set ft=sh:

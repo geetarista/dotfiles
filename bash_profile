@@ -3,4 +3,3 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # vim: set ft=sh:
-
