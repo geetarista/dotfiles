@@ -26,4 +26,6 @@ export AUTOFEATURE=true
 
 export CC=/usr/bin/clang
 
+export rvm_path=$HOME/workspace/rvm
+
 # vim: set ft=sh:
