@@ -8,6 +8,10 @@ eval "$(rbenv init -)"
 
 crontab ~/.crontab
 
+# vi mode in bash
+# going to try this out some day
+# set -o vi
+
 # a -- black
 # b -- red
 # c -- green
