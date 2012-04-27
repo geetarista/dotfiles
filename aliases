@@ -43,4 +43,7 @@ alias rmws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -pr
 
 alias e=`which $EDITOR`
 
+# http://inessential.com/2012/04/23/ded
+alias ded='rm -rf /Users/brent/Library/Developer/Xcode/DerivedData'
+
 # vim: set ft=sh:
