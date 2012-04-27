@@ -6,6 +6,8 @@ complete -C ~/.capistrano_completion -o default capistrano
 
 eval "$(rbenv init -)"
 
+[ -s "/Users/robbycolvin/.scm_breeze/scm_breeze.sh" ] && source "/Users/robbycolvin/.scm_breeze/scm_breeze.sh"
+
 crontab ~/.crontab
 
 # vi mode in bash
