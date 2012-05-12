@@ -14,6 +14,23 @@ crontab ~/.crontab
 # going to try this out some day
 # set -o vi
 
+## Bash history settings
+# append history instead of overwriting
+# shopt -s histappend
+unset HISTFILESIZE
+HISTSIZE=1000
+# HISTCONTROL=ignorespace
+# HISTCONTROL=ignoredups
+HISTCONTROL=ignoreboth
+# Ignore specific commands
+HISTIGNORE='ls:bg:fg:history'
+# Format timestamp for each record
+HISTTIMEFORMAT='%F %T '
+# Split multiple commands
+# shopt -s cmdhist
+# Record each command immediately instead of waiting until session termination
+# PROMPT_COMMAND='history -a; history -n'
+
 # a -- black
 # b -- red
 # c -- green
