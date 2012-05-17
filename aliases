@@ -32,6 +32,7 @@ alias ...='cd ../../'
 alias ....='cd ../../..'
 
 alias bi='bundle install'
+alias bip='bundle install --path vendor/bundle'
 alias be='bundle exec'
 alias bu='bundle update'
 alias bl='bundle lock'
