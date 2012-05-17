@@ -30,6 +30,8 @@ alias dfh='df -h'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../..'
+# tolerate typos
+# shopt -s cdspell
 
 alias bi='bundle install'
 alias bip='bundle install --path vendor/bundle'

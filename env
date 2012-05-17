@@ -28,4 +28,6 @@ export CC=/usr/bin/clang
 
 export rvm_path=$HOME/workspace/rvm
 
+export CDPATH=.:~:workspace
+
 # vim: set ft=sh:
