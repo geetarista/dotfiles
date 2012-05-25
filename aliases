@@ -27,6 +27,8 @@ alias v='vim'
 
 alias dfh='df -h'
 
+alias t='tail -n 1000 -f'
+
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../..'
