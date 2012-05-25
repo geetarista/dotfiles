@@ -37,7 +37,7 @@
 [alias]
 	a = add
 	c = commit
-	s = status
+	s = status -sb
 	ss = status -sb
 	ca = commit -a
 	co = checkout
