@@ -8,12 +8,16 @@ if defined?(::Bundler)
   end
 end
 
-require 'rubygems'
-require 'pry'
-require 'pry-editline'
+begin
+  require 'rubygems'
+  require 'pry'
+  require 'pry-editline'
 
-Pry.start
-exit
+  Pry.start
+  exit
+rescue LoadError
+  puts "Unable to load Pry"
+end
 
 # if IRB.version.include?('DietRB')
 #   require 'irb/ext/colorize'

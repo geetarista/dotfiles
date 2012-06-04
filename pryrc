@@ -1,6 +1,6 @@
 # http://lucapette.com/pry/pry-everywhere/
 
-Pry.config.editor = "gvim --nofork"
+Pry.config.editor = "mvim --nofork"
 Pry.config.pager = false
 Pry.config.hooks.add_hook(:after_session, :say_bye) do
   puts "bye-bye"
