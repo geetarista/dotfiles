@@ -15,7 +15,6 @@ alias o='open . &'
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
-alias m='mvim'
 # https://gist.github.com/910470
 if [ -x `which brew` ]; then
   macvim_version=`brew list --versions macvim | sed 's/.* \([0-9\.\-]*\)$/\1/'`
