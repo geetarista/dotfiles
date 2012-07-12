@@ -37,6 +37,7 @@
 [alias]
 	a = add
 	c = commit
+	ca = commit --amend --reuse-message=HEAD
 	s = status -sb
 	ca = commit -a
 	co = checkout
