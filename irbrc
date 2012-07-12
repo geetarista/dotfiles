@@ -1,13 +1,5 @@
 #!/usr/bin/ruby
 
-if defined?(::Bundler)
-  all_global_gem_paths = Dir.glob("#{Gem.path.first}/gems/*")
-  all_global_gem_paths.each do |p|
-    gem_path = "#{p}/lib"
-    $LOAD_PATH << gem_path
-  end
-end
-
 def copy(*args)
   IO.popen('pbcopy', 'r+') do |clipboard|
     clipboard.puts args.map(&:inspect)
@@ -17,12 +9,17 @@ end
 begin
   require 'rubygems'
   require 'pry'
-  require 'pry-editline'
 
   Pry.start
   exit
 rescue LoadError
   puts "Unable to load Pry"
+end
+
+begin
+  require 'pry-editline'
+rescue
+  puts "Unable to load pry-editline."
 end
 
 # if IRB.version.include?('DietRB')
