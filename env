@@ -15,6 +15,8 @@ export PATH="$PATH:/sbin"
 export PATH="$PATH:/usr/X11/bin"
 export PATH="$PATH:/usr/local/share/npm/bin"
 export PATH="$PATH:/usr/local/share/python"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/google_appengine"
 
 export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 
@@ -31,5 +33,7 @@ export CC=/usr/bin/clang
 export rvm_path=$HOME/workspace/rvm
 
 export CDPATH=.:~:workspace
+
+export GOPATH=`which go`
 
 # vim: set ft=sh:
