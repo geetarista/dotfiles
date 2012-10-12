@@ -11,6 +11,7 @@
 --ignore-dir=logs
 --ignore-dir=tmp
 --ignore-dir=vendor
+--ignore-dir=.git
 
 --type-set
 --type-set=haml=.haml
