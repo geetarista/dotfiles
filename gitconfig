@@ -63,6 +63,7 @@
 	su = submodule update
 	begone = "!begone() { git branch -d $1 && git push origin :$1 && git remote prune origin; }; begone"
 	nix = "!nix() { git branch -D $1 && git push origin :$1; git remote prune origin; }; nix"
+	y = log --since yesterday --oneline --author Robby Colvin
 [merge]
 	tool = vim # opendiff
 [github]
