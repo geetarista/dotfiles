@@ -1,4 +1,3 @@
 # local user crontab file
 
-# add cron tasks here
-# * * * * * osascript -e 'tell application "iChat" to log in'
+0 0 * * * find /Users/robbycolvin/workspace/ -name development.log -exec cp /dev/null {} \;
