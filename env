@@ -34,6 +34,8 @@ export rvm_path=$HOME/workspace/rvm
 
 export CDPATH=.:~:workspace
 
-export GOPATH=`which go`
+BREWGO=`brew --prefix go`
+[[ -d $BREWGO ]] && export GOROOT=$BREWGO && export GOBIN=$BREWGO/bin \
+    && export GOPATH=$GOROOT && export PATH=$GOBIN:$PATH
 
 # vim: set ft=sh:
