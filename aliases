@@ -4,6 +4,9 @@ alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1
 alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
 alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
 
+alias lll='for i in *; do echo "`ls -1aRi "$i" | awk "/^[0-9]+ / { print $1 }" | sort -u | wc -l` $i" ; done | sort -n'
+
+alias ccat='pygmentize -O style=monokai -f console256 -g'
 alias cgrep='grep --color=auto'
 
 alias reload='. ~/.bashrc'
