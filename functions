@@ -96,4 +96,13 @@ extract () {
   fi
 }
 
+function updaterepos() {
+  for dir in $(find . -type d -d 1) ; do
+    if [ -d $dir/.git ]; then
+      echo $dir
+      git --git-dir=$dir/.git --work-tree=$PWD/$dir pull
+    fi
+  done
+}
+
 # vim: set ft=sh:
