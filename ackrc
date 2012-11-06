@@ -21,4 +21,4 @@
 --type-add=css=.sass,.less
 --type-add=js=.js.erb,.coffee,.json
 --type-add=html=.html.erb,.html.haml
-
+--type-set=puppet=.pp
