@@ -35,6 +35,7 @@ export rvm_path=$HOME/workspace/rvm
 export CDPATH=.:~:workspace
 
 export GOPATH="$HOME/gocode"
+export GOROOT="/usr/local/go"
 export PATH="$PATH:$GOPATH/bin"
 
 # GOPATH for homebrew
