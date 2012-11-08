@@ -25,7 +25,8 @@ if [ -x `which brew` ]; then
     alias vim=`brew --prefix`/Cellar/macvim/${macvim_version}/MacVim.app/Contents/MacOS/Vim
   fi
 fi
-alias v='vim'
+
+alias v='vagrant'
 
 alias dfh='df -h'
 
