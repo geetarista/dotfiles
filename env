@@ -22,7 +22,7 @@ export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 
-export EDITOR="vim -f"
+export EDITOR="mvim -f"
 
 export GIT_EDITOR="$EDITOR"
 
