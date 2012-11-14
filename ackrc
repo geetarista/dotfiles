@@ -12,6 +12,7 @@
 --ignore-dir=tmp
 --ignore-dir=vendor
 --ignore-dir=.git
+--ignore-dir=node_modules
 
 --type-set
 --type-set=haml=.haml
