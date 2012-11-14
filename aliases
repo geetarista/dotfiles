@@ -54,4 +54,6 @@ alias e=`which $EDITOR`
 # http://inessential.com/2012/04/23/ded
 alias ded='rm -rf /Users/brent/Library/Developer/Xcode/DerivedData'
 
+alias man='man -P less'
+
 # vim: set ft=sh:
