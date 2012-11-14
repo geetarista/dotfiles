@@ -34,9 +34,25 @@ export rvm_path=$HOME/workspace/rvm
 
 export CDPATH=.:~:workspace
 
+# Go-specific
 export GOPATH="$HOME/gocode"
 export GOROOT="/usr/local/go"
 export PATH="$PATH:$GOPATH/bin"
+
+# Colors for `man`
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;34m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
+# Keep less output after quit
+export LESS="-X -R"
+
+# MOAR HISTORY
+export HISTFILESIZE=10000
 
 # GOPATH for homebrew
 # BREWGO=`brew --prefix go`
