@@ -69,6 +69,16 @@ case ${ruby_version%-*} in
   *)     ruby_version_string="system" ;;
 esac
 
-PS1="$GREEN\$(date +%H:%M) \w$YELLOW $ruby_version_string \$(__git_ps1 "[%s]")$WHITE\$ "
+# Check to see if we're in a directory with vagrant
+parse_vm_state() {
+  [ -e .vagrant ] || return 1
+    VBoxManage showvminfo $(cat .vagrant | \
+      sed 's/.*\"\(.*\)\"[^\"]*$/\1/') --machinereadable | \
+      grep 'VMState=' | \
+      sed 's/.*"\(.*\)"[^"]*$/ vm:\1/'
+}
+
+PS1="$GREEN\$(date +%H:%M) \w$YELLOW $ruby_version_string \$(__git_ps1 "[%s]")$GREEN$(parse_vm_state) $WHITE\$ "
+PS2="\[[33;1m\]continue \[[0m[1m\]> "
 
 # vim: set ft=sh:
