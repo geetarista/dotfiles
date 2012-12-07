@@ -5,6 +5,10 @@ set show-all-if-ambiguous on
 # Case insensitive tab-completion
 set completion-ignore-case on
 
+# Search through history with up/down arrows
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
 $if Bash
   # In bash only, enable "magic space" so that typing space
   # will show completions. i.e. !!_ (where _ is space)
