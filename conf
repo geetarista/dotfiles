@@ -79,6 +79,6 @@ parse_vm_state() {
 }
 
 PS1="$GREEN\$(date +%H:%M) \w$YELLOW $ruby_version_string \$(__git_ps1 "[%s]")$GREEN$(parse_vm_state) $WHITE\$ "
-PS2="\[[33;1m\]continue \[[0m[1m\]> "
+PS2="$WHITE continue > "
 
 # vim: set ft=sh:
