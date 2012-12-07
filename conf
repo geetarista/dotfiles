@@ -22,12 +22,12 @@ crontab ~/.crontab
 # append history instead of overwriting
 # shopt -s histappend
 unset HISTFILESIZE
-HISTSIZE=1000
+HISTSIZE=50000
 # HISTCONTROL=ignorespace
 # HISTCONTROL=ignoredups
 HISTCONTROL=ignoreboth
 # Ignore specific commands
-HISTIGNORE='ls:bg:fg:history'
+HISTIGNORE='bg:fg:history'
 # Format timestamp for each record
 HISTTIMEFORMAT='%F %T '
 # Split multiple commands
