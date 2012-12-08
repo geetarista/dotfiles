@@ -19,21 +19,17 @@ crontab ~/.crontab
 # set -o vi
 
 ## Bash history settings
-# append history instead of overwriting
-# shopt -s histappend
 unset HISTFILESIZE
 HISTSIZE=50000
-# HISTCONTROL=ignorespace
-# HISTCONTROL=ignoredups
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth,erasedups
 # Ignore specific commands
 HISTIGNORE='bg:fg:history'
 # Format timestamp for each record
 HISTTIMEFORMAT='%F %T '
-# Split multiple commands
-# shopt -s cmdhist
-# Record each command immediately instead of waiting until session termination
-# PROMPT_COMMAND='history -a; history -n'
+# Append from different windows
+shopt -s histappend # cmdhist
+# Record each command immediately and refresh for other windows
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # a -- black
 # b -- red
