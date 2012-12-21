@@ -105,4 +105,15 @@ function updaterepos() {
   done
 }
 
+function resolvekiip {
+  HOST=`dig $1 | sed -n 's|.*A.*\(10\..*\)|\1|p'`
+  echo $HOST
+}
+
+function sshkiip {
+  cd ~/workspace/kiip;
+  HOST=`dig $1 | sed -n 's|.*A.*\(10\..*\)|\1|p'`
+  ssh -i .chef/kiip-ssh.pem -l ubuntu $HOST ${@:2}
+}
+
 # vim: set ft=sh:
