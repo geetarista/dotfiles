@@ -47,7 +47,7 @@
 	m = merge
 	# merge feature
 	mf = rebase HEAD feature && git rebase HEAD @{-2}
-	d = diff
+	d = diff -b
 	p = push
 	pl = pull
 	plr = pull --rebase
