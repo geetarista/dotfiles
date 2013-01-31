@@ -65,7 +65,7 @@ case ${ruby_version%-*} in
   *)     ruby_version_string="system" ;;
 esac
 
-PS1="$GREEN\$(date +%H:%M) \w$YELLOW $ruby_version_string \$(__git_ps1 "[%s]")$GREEN$(parse_vm_state) $WHITE\$ "
+PS1="$GREEN\$(date +%H:%M) \w$YELLOW $ruby_version_string \$(__git_ps1 "[%s]") $WHITE\$ "
 PS2="$WHITE continue > "
 
 # vim: set ft=sh:
