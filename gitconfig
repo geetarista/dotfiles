@@ -1,4 +1,4 @@
-# vim: set ft=sh:
+# vim: set ft=sh ts=4 sts=4 sw=4 noet:
 
 [user]
 	name = Robby Colvin
@@ -36,33 +36,35 @@
 	whitespace = nowarn
 [alias]
 	a = add
+	begone = "!begone() { git branch -d $1 && git push origin :$1 && git remote prune origin; }; begone"
 	c = commit
 	ca = commit --amend --reuse-message=HEAD
-	s = status -sb
 	ca = commit -a
 	co = checkout
 	cob = checkout -b
 	cor = checkout -t
 	b = branch
+	d = diff -b
 	m = merge
 	# merge feature
 	mf = rebase HEAD feature && git rebase HEAD @{-2}
-	d = diff -b
 	p = push
 	pl = pull
 	plr = pull --rebase
-	unadd = reset HEAD
-	undo = reset --soft HEAD^
+	# prune local
+	prl = "!git branch -d $(git branch --merged | grep -v '^*' | grep -v 'master')"
 	pulldiff = diff HEAD^ HEAD
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	l1 = log --pretty=oneline --abbrev-commit --decorate
 	l1d = log --oneline --decorate
 	lp = log -p
-	wd = diff --word-diff
-	sync = "!sync() { git fetch origin master; git rebase -p origin/$1; }; sync"
-	su = submodule update
-	begone = "!begone() { git branch -d $1 && git push origin :$1 && git remote prune origin; }; begone"
 	nix = "!nix() { git branch -D $1 && git push origin :$1; git remote prune origin; }; nix"
+	s = status -sb
+	su = submodule update
+	sync = "!sync() { git fetch origin master; git rebase -p origin/$1; }; sync"
+	unadd = reset HEAD
+	undo = reset --soft HEAD^
+	wd = diff --word-diff
 	y = "!y() { git log --since yesterday --oneline --author=\"$(git config user.name)\"; }; y"
 [merge]
 	tool = vim # opendiff
