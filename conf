@@ -49,11 +49,11 @@ PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # H -- bold light gray; looks like bright white
 # x -- default foreground or background
 
-DIR=Ex; SYM_LINK=Gx; SOCKET=Fx; PIPE=dx; EXE=Cx; BLOCK_SP=Dx; CHAR_SP=Dx; EXE_SUID=hb; EXE_GUID=ad; DIR_STICKY=Ex; DIR_WO_STICKY=Ex
+# DIR=Ex; SYM_LINK=Gx; SOCKET=Fx; PIPE=dx; EXE=Cx; BLOCK_SP=Dx; CHAR_SP=Dx; EXE_SUID=hb; EXE_GUID=ad; DIR_STICKY=Ex; DIR_WO_STICKY=Ex
 
-export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
+# export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
 export CLICOLOR=1
-# export TERM=xterm-color
+export TERM=xterm-color
 
 GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
