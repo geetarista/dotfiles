@@ -1,43 +1,3 @@
-alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
-alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
-
-alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
-alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
-
-alias lll='for i in *; do echo "`ls -1aRi "$i" | awk "/^[0-9]+ / { print $1 }" | sort -u | wc -l` $i" ; done | sort -n'
-
-alias ccat='pygmentize -O style=monokai -f console256 -g'
-alias cgrep='grep --color=auto'
-
-alias reload='. ~/.bashrc'
-
-alias k9="killall -9"
-
-alias o='open . &'
-
-alias tu='top -o cpu' # cpu
-alias tm='top -o vsize' # memory
-
-# https://gist.github.com/910470
-if [ -x `which brew` ]; then
-  macvim_version=`brew list --versions macvim | sed 's/.* \([0-9\.\-]*\)$/\1/'`
-  if [ -n "${macvim_version}" ]; then
-    alias vim=`brew --prefix`/Cellar/macvim/${macvim_version}/MacVim.app/Contents/MacOS/Vim
-  fi
-fi
-
-alias v='vagrant'
-
-alias dfh='df -h'
-
-alias t='tail -n 1000 -f'
-
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../..'
-# tolerate typos
-# shopt -s cdspell
-
 alias bi='bundle install'
 alias bip='bundle install --path vendor/bundle'
 alias be='bundle exec'
@@ -45,15 +5,42 @@ alias bu='bundle update'
 alias bl='bundle lock'
 alias bul='bundle unlock'
 
-alias dnsflush='dscacheutil -flushcache'
-
-alias rmws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E \"s/[[:space:]]*$//\""
-
-alias e=`which $EDITOR`
+alias ccat='pygmentize -O style=monokai -f console256 -g'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../..'
+alias cdd='cd ~/Downloads'
+alias cgrep='grep --color=auto'
 
 # http://inessential.com/2012/04/23/ded
 alias ded='rm -rf /Users/brent/Library/Developer/Xcode/DerivedData'
+alias dfh='df -h'
+alias dnsflush='dscacheutil -flushcache'
+alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
+alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
+
+alias e=`which $EDITOR`
+
+alias k9="killall -9"
+
+alias lll='for i in *; do echo "`ls -1aRi "$i" | awk "/^[0-9]+ / { print $1 }" | sort -u | wc -l` $i" ; done | sort -n'
 
 alias man='man -P less'
+alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
+alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
+
+alias reload='reset &&. ~/.bash_profile'
+
+alias o='open . &'
+
+alias rmws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E \"s/[[:space:]]*$//\""
+
+alias scpkiip="scp -i $HOME/workspace/kiip/.chef/kiip-ssh.pem"
+
+alias t='tail -n 1000 -f'
+alias tu='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+
+alias v='vagrant'
 
 # vim: set ft=sh:
