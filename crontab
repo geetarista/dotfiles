@@ -1,3 +1,3 @@
 # local user crontab file
 
-0 0 * * * find /Users/robbycolvin/workspace/ -name development.log -exec cp /dev/null {} \;
+0 0 * * * find ${HOME}/workspace/ -name development.log -exec cp /dev/null {} \;
