@@ -1,4 +1,13 @@
 # vim: set ft=sh ts=4 sts=4 sw=4 noet:
+# [hub]
+#     protocol = https
+
+[core]
+	excludesfile = /opt/boxen/config/git/gitignore
+	editor = mvim -w
+	quotepath = false
+[credential]
+    helper = /opt/boxen/bin/boxen-git-credential
 
 [user]
 	name = Robby Colvin
@@ -25,7 +34,7 @@
 	remote = origin
 	merge = refs/heads/master
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /opt/boxen/config/git/gitignore
 	editor = mvim -w
 	quotepath = false
 [push]
@@ -42,7 +51,7 @@
 	ca = commit -a
 	co = checkout
 	cob = checkout -b
-	cor = checkout -t
+	cor = "!cor() { git checkout -t origin/$1; }; cor"
 	b = branch
 	d = diff -b
 	m = merge
