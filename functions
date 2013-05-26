@@ -73,7 +73,7 @@ rmdsstore() {
 }
 
 function dnsflush() {
-  dscacheutil -flushcache
+  sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache
 }
 
 extract () {
@@ -113,9 +113,18 @@ function resolvekiip {
 }
 
 function sshkiip {
-  cd ~/workspace/kiip;
   HOST=`dig $1 | sed -n 's|.*A.*\(10\..*\)|\1|p'`
-  ssh -i .chef/kiip-ssh.pem -l ubuntu $HOST ${@:2}
+  ssh -i $HOME/workspace/kiip/.chef/kiip-ssh.pem -l ubuntu $HOST ${@:2}
 }
+
+function package_vmware() {
+  /Applications/VMware\ Fusion.app/Contents/Library/vmware-vdiskmanager -d ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/Virtual\ Disk.vmdk
+  /Applications/VMware\ Fusion.app/Contents/Library/vmware-vdiskmanager -k ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/Virtual\ Disk.vmdk
+  tar cvzf vmware.box ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/*
+}
+
+# function echo {
+#   builtin echo -e '\E[36m'$(basename $0 .sh): '\E[33m'$1;
+# }
 
 # vim: set ft=sh:
