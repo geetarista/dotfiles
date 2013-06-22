@@ -29,7 +29,7 @@ alias man='man -P less'
 alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
 alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
 
-alias reload='reset &&. ~/.bash_profile'
+alias reload='reset && . ~/.bash_profile'
 
 alias o='open . &'
 
