@@ -2,6 +2,10 @@ function cdw() {
   cd ~/workspace/$1;
 }
 
+function cdg() {
+  cd $GOPATH/src/github.com/$1;
+}
+
 function daylog() {
   git log --format="%s " --since="18 hours ago" --author="Robby Colvin" --no-merges --reverse | xargs -0 ruby -e "puts ARGV.to_s.split(/ \n/).join(' ')"
 }
