@@ -124,7 +124,10 @@ function sshkiip {
 function package_vmware() {
   /Applications/VMware\ Fusion.app/Contents/Library/vmware-vdiskmanager -d ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/Virtual\ Disk.vmdk
   /Applications/VMware\ Fusion.app/Contents/Library/vmware-vdiskmanager -k ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/Virtual\ Disk.vmdk
-  tar cvzf vmware.box ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/*
+  pushd ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm
+  tar cvzf vmware.box *
+  popd
+  mv ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/vmware.box .
 }
 
 # function echo {
