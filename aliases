@@ -9,6 +9,7 @@ alias ccat='pygmentize -O style=monokai -f console256 -g'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias cdd='cd ~/Downloads'
 alias cgrep='grep --color=auto'
 
