@@ -97,4 +97,4 @@
 	cmd = /bin/sh -c 'open http://git-scm.com/docs/$(basename $1 .html)' --
 [help]
 	browser = gitscm
-	autocorrect = 1
+	autocorrect = 0
