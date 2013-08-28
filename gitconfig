@@ -30,17 +30,10 @@
 	added = green
 	changed = yellow
 	untracked = red
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
-[core]
-	excludesfile = /opt/boxen/config/git/gitignore
-	editor = mvim -w
-	quotepath = false
 [push]
-	default = matching
+	default = tracking
 [pull]
-	default = matching
+	default = tracking
 [apply]
 	whitespace = nowarn
 [alias]
