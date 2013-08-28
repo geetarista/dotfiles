@@ -31,6 +31,7 @@ alias mysqlstart="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld
 alias mysqlstop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
 
 alias reload='reset && . ~/.bash_profile'
+alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 alias o='open . &'
 
