@@ -1,4 +1,12 @@
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+Icon?
+Thumbs.db
+ehthumbs.db
 *.swp
 *.swo
+Session.vim
 .tags
-.DS_Store
