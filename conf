@@ -68,6 +68,7 @@ WHITE="\[\033[0;0m\]"
 ruby_version=$(rbenv version-name)
 case ${ruby_version%-*} in
   1.9.3) ruby_version_string="❸" ;;
+  2.0.0) ruby_version_string="❷" ;;
   *)     ruby_version_string="system" ;;
 esac
 
