@@ -3,7 +3,7 @@
 #     protocol = https
 
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
 	editor = mvim -w
 	quotepath = false
 [credential]
