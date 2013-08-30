@@ -1,9 +1,11 @@
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
-  . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+GIT_COMPLETION_FILE="$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+if [ -f $GIT_COMPLETION_FILE ]; then
+  . $GIT_COMPLETION_FILE
 fi
 
-if [ -f $(brew --prefix git)/share/git-core/contrib/completion/git-prompt.sh ]; then
-  . $(brew --prefix git)/share/git-core/contrib/completion/git-prompt.sh
+GIT_PROMPT_FILE="$(brew --prefix git)/etc/bash_completion.d/git-prompt.sh"
+if [ -f $GIT_PROMPT_FILE ]; then
+  . $GIT_PROMPT_FILE
 fi
 
 # source ~/.bash_completion
