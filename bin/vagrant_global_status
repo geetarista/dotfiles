@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+ 
+echo "Searching for Vagrant boxes..."
+ 
+for file in $(find / -type f -name Vagrantfile 2>/dev/null); do
+    dir=$(dirname $file)
+    echo "Status for ${dir}:"
+    pushd $dir > /dev/null
+    out="$(vagrant status)"
+    popd > /dev/null
+ 
+    out="${out/Current machine states\:/}"
+    out="${out/The environment has not yet been created. Run \`vagrant up\` to/}"
+    out="${out/create the environment. If a machine is not created, only the/}"
+    out="${out/default provider will be shown. So if a provider is not listed,/}"
+    out="${out/then the machine is not created for that environment./}"
+    out="${out/The environment has not yet been created. Run \`vagrant up\` to create the environment. If a machine is not created, only the default provider will be shown. So if a provider is not listed, then the machine is not created for that environment./}"
+    out="${out/The VM is powered off. To restart the VM, run \`vagrant up\`/}"
+ 
+    echo "  " $out
+done
+
+# vim: set ft=sh:
