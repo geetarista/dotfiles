@@ -38,6 +38,7 @@ export GOPATH="$HOME/gocode"
 export GOROOT=$(brew --prefix go)
 export GOBIN="$GOROOT/bin"
 export PATH="$PATH:$GOBIN"
+export PATH="$PATH:$GOPATH/bin"
 
 # Colors for `man`
 export LESS_TERMCAP_mb=$'\E[01;31m'
