@@ -61,7 +61,7 @@ PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
 export CLICOLOR=1
-export TERM=xterm-color
+# export TERM=xterm-color
 
 GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
