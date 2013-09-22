@@ -10,3 +10,4 @@ ehthumbs.db
 *.swo
 Session.vim
 .tags
+*.un~
