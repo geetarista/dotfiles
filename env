@@ -1,23 +1,14 @@
-# http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u4-downloads-1591156.html
-export PATH="$PATH:/Library/Java/JavaVirtualMachines/jdk1.7.0_13.jdk/Contents/Home/bin"
-export PATH="$PATH:/usr/local/share/python"
+export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/local/sbin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:$HOME/.bin"
-export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/bin"
-export PATH="$PATH:/bin"
 export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/usr/X11/bin"
-export PATH="$PATH:/usr/local/share/npm/bin"
-export PATH="$PATH:/usr/local/share/python"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:$HOME/google_appengine"
-
-export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 
@@ -26,10 +17,6 @@ export EDITOR="mvim -f"
 export GIT_EDITOR="$EDITOR"
 
 export AUTOFEATURE=true
-
-export CC=/usr/bin/clang
-
-export rvm_path=$HOME/workspace/rvm
 
 export CDPATH=.:~:workspace
 
