@@ -35,7 +35,8 @@ export CDPATH=.:~:workspace
 
 # Go-specific
 export GOPATH="$HOME/gocode"
-export GOROOT=$(brew --prefix go)
+# export GOROOT=$(brew --prefix go)
+export GOROOT="/usr/local/go"
 export GOBIN="$GOROOT/bin"
 export PATH="$PATH:$GOBIN"
 export PATH="$PATH:$GOPATH/bin"
