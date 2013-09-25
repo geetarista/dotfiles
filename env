@@ -18,7 +18,7 @@ export GIT_EDITOR="$EDITOR"
 
 export AUTOFEATURE=true
 
-export CDPATH=.:~:workspace
+export CDPATH=.:~:~/workspace
 
 # Go-specific
 export GOPATH="$HOME/gocode"
