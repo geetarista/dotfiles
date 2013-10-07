@@ -14,12 +14,11 @@
 --ignore-dir=.git
 --ignore-dir=node_modules
 
---type-set
---type-set=haml=.haml
---type-set=sass=.sass
---type-set=cucumber=.feature
---type-add=ruby=.rake,.builder,.haml,.rsel
---type-add=css=.sass,.less
---type-add=js=.js.erb,.coffee,.json
---type-add=html=.html.erb,.html.haml
---type-set=puppet=.pp
+--type-set=haml:ext:.haml
+--type-set=sass:ext:.sass
+--type-set=cucumber:ext:.feature
+--type-set=ruby:ext:.rake,.builder,.haml,.rsel
+--type-set=css:ext:.sass,.less
+--type-set=js:ext:.js.erb,.coffee,.json
+--type-set=html:ext:.html.erb,.html.haml
+--type-set=puppet:ext:.pp
