@@ -122,12 +122,18 @@ function sshkiip {
 }
 
 function package_vmware() {
-  /Applications/VMware\ Fusion.app/Contents/Library/vmware-vdiskmanager -d ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/Virtual\ Disk.vmdk
-  /Applications/VMware\ Fusion.app/Contents/Library/vmware-vdiskmanager -k ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/Virtual\ Disk.vmdk
-  pushd ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm
+  ID=$(ls .vagrant/machines/default/vmware_fusion | grep -v id | grep -v lock)
+  DIR=".vagrant/machines/default/vmware_fusion/${ID}"
+  VDISK="$DIR/Virtual Disk.vmdk"
+  VDISKMANAGER="/Applications/VMware Fusion.app/Contents/Library/vmware-vdiskmanager"
+  "$VDISKMANAGER" -d "$VDISK"
+  "$VDISKMANAGER" -k "$VDISK"
+  pushd $DIR
+  if [ -f vmware.box ]; then rm vmware.box; fi
   tar cvzf vmware.box *
   popd
-  mv ./.vagrant/machines/default/vmware_fusion/vm.vmwarevm/vmware.box .
+  mv "${DIR}/vmware.box" .
+  echo "Packaged VM to ./vmware.box"
 }
 
 # function echo {
