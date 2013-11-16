@@ -8,22 +8,14 @@ if [ -f $GIT_PROMPT_FILE ]; then
   . $GIT_PROMPT_FILE
 fi
 
-# source ~/.bash_completion
 source ~/.ssh_completion
-complete -C ~/.rake_completion -o default rake
-complete -C ~/.capistrano_completion -o default capistrano
 
 # tolerate typos
 # shopt -s cdspell
 
-# eval "$(rbenv init -)"
-
-[ -s "/Users/robbycolvin/.scm_breeze/scm_breeze.sh" ] && source "/Users/robbycolvin/.scm_breeze/scm_breeze.sh"
-
 crontab ~/.crontab
 
 # vi mode in bash
-# going to try this out some day
 # set -o vi
 
 ## Bash history settings
@@ -39,42 +31,12 @@ shopt -s histappend # cmdhist
 # Record each command immediately and refresh for other windows
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# a -- black
-# b -- red
-# c -- green
-# d -- brown
-# e -- blue
-# f -- magenta
-# g -- cyan
-# h -- light gray
-# A -- bold black, usually shows up as dark gray
-# B -- bold red
-# C -- bold green
-# D -- bold brown, usually shows up as yellow
-# E -- bold blue
-# F -- bold magenta
-# G -- bold cyan
-# H -- bold light gray; looks like bright white
-# x -- default foreground or background
-
-# DIR=Ex; SYM_LINK=Gx; SOCKET=Fx; PIPE=dx; EXE=Cx; BLOCK_SP=Dx; CHAR_SP=Dx; EXE_SUID=hb; EXE_GUID=ad; DIR_STICKY=Ex; DIR_WO_STICKY=Ex
-
-# export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
 export CLICOLOR=1
-# export TERM=xterm-color
 
 GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;0m\]"
 
-ruby_version=$(rbenv version-name)
-case ${ruby_version%-*} in
-  1.9.3) ruby_version_string="❸" ;;
-  2.0.0) ruby_version_string="❷" ;;
-  *)     ruby_version_string="system" ;;
-esac
+PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} \$(__git_ps1 "[%s]") ${WHITE}λ "
 
-PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} ${ruby_version_string} \$(__git_ps1 "[%s]") ${WHITE}λ "
-PS2="${WHITE} continue > "
-
-# vim: set ft=sh:
+# vim: set ft=sh :
