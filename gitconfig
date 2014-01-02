@@ -37,7 +37,7 @@
 [apply]
 	whitespace = nowarn
 [alias]
-	a = add
+	a = add --all
 	begone = "!begone() { git branch -d $1 && git push origin :$1 && git remote prune origin; }; begone"
 	c = commit
 	ca = commit --amend --reuse-message=HEAD
