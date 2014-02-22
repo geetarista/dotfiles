@@ -10,4 +10,6 @@ ehthumbs.db
 *.swo
 Session.vim
 .tags
+tags
 *.un~
+*.pyc
