@@ -91,3 +91,6 @@
 [help]
 	browser = gitscm
 	autocorrect = 0
+
+[hub]
+protocol = https
