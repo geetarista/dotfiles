@@ -126,7 +126,7 @@ function sshkiip {
 }
 
 function package_vmware() {
-  ID=$(ls .vagrant/machines/default/vmware_fusion | grep -v id | grep -v lock)
+  ID=$(ls .vagrant/machines/default/vmware_fusion | grep -v id | grep -v lock | grep -v action_provision)
   DIR=".vagrant/machines/default/vmware_fusion/${ID}"
   VDISK="$DIR/Virtual Disk.vmdk"
   VDISKMANAGER="/Applications/VMware Fusion.app/Contents/Library/vmware-vdiskmanager"
