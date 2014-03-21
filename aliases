@@ -1,3 +1,10 @@
+alias a='ansible'
+alias ad='ansible-doc'
+alias agx='ansible-galaxy'
+alias ap='ansible-playbook'
+alias apl='ansible-pull'
+alias av='ansible-vault'
+
 alias bi='bundle install'
 alias bip='bundle install --path vendor/bundle'
 alias be='bundle exec'
