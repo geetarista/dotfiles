@@ -53,5 +53,6 @@ alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
 alias v='vagrant'
+alias vg='vagrant global-status'
 
 # vim: set ft=sh:
