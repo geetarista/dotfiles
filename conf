@@ -37,6 +37,12 @@ GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;0m\]"
 
-PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} \$(__git_ps1 "[%s]") ${WHITE}λ "
+if [[ "$(go version)" =~ (go[0-9].[0-9].?[0-9]?) ]]; then
+    go_version_string="${BASH_REMATCH[1]}"
+else
+    go_version_string=""
+fi
+
+PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} ${go_version_string}\$(__git_ps1 "[%s]") ${WHITE}λ "
 
 # vim: set ft=sh :
