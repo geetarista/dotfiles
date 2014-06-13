@@ -55,6 +55,8 @@
 	plr = pull --rebase
 	# prune local
 	prl = "!git branch -d $(git branch --merged | grep -v '^*' | grep -v 'master')"
+	# prune remote
+	prr = "!git push origin $(git branch -r --merged | grep -v master | sed -e 's/origin\\//:/')"
 	pulldiff = diff HEAD^ HEAD
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	l1 = log --pretty=oneline --abbrev-commit --decorate
