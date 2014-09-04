@@ -7,7 +7,7 @@
 	editor = mvim -w
 	quotepath = false
 [credential]
-    helper = /opt/boxen/bin/boxen-git-credential
+    helper = /usr/local/bin/git-credential-osxkeychain
 
 [user]
 	name = Robby Colvin
