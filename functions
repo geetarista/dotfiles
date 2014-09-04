@@ -77,7 +77,9 @@ rmdsstore() {
 }
 
 function dnsflush() {
-  sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache
+  sudo killall -HUP mDNSResponder && \
+    sudo killall -INFO mDNSResponder && \
+    sudo dscacheutil -flushcache
 }
 
 extract () {
