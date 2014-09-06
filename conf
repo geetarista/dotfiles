@@ -43,6 +43,6 @@ else
     go_version_string=""
 fi
 
-PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} ${go_version_string}\$(__git_ps1 "[%s]") ${WHITE}λ "
+PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} ${go_version_string} \$(__git_ps1 "[%s]") ${WHITE}λ "
 
 # vim: set ft=sh :
