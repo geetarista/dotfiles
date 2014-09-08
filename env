@@ -10,6 +10,7 @@ export PATH="$PATH:/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/usr/X11/bin"
 export PATH="$PATH:$HOME/go_appengine"
+export PATH="$PATH:/usr/local/heroku/bin"
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 
