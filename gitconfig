@@ -68,6 +68,7 @@
 	sync = "!sync() { git fetch origin master; git rebase -p origin/$1; }; sync"
 	unadd = reset HEAD
 	undo = reset --soft HEAD^
+	upsync = "!upsync() { git fetch upstream; git checkout master; git merge upstream/master; }; upsync"
 	wd = diff --word-diff
 	y = "!y() { git log --since yesterday --oneline --author=\"$(git config user.name)\"; }; y"
 [merge]
