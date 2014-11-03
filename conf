@@ -8,11 +8,11 @@ if [ -f $GIT_PROMPT_FILE ]; then
   . $GIT_PROMPT_FILE
 fi
 
-# hg_ps1() {
-#   if [ -d .hg ]; then
-#     hg prompt " [{branch}]"
-#   fi
-# }
+hg_ps1() {
+  if [ -d .hg ]; then
+    hg prompt " [{branch}]"
+  fi
+}
 
 source ~/.ssh_completion
 
@@ -51,6 +51,6 @@ else
     go_version_string=""
 fi
 
-PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} ${go_version_string}$(__git_ps1 " [%s]") ${WHITE}λ "
+PS1="${GREEN}\$(date +%H:%M:%S) \w${YELLOW} ${go_version_string}\$(hg_ps1 ' [%s]')\$(__git_ps1 ' [%s]') ${WHITE}{\j} λ "
 
 # vim: set ft=sh :
