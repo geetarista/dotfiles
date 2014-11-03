@@ -1,2 +1,13 @@
+[email]
+from = rcolvin <rcolvin@couponsinc.com>
+
 [extensions]
-prompt = /Users/rcolvin/workspace/hg-prompt/prompt.py
+prompt = $HOME/workspace/hg-prompt/prompt.py
+
+[trusted]
+users =
+groups = engineering
+
+[ui]
+ignore = ~/.hgignore
+username = rcolvin <rcolvin@couponsinc.com>
