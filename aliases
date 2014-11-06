@@ -23,7 +23,6 @@ alias cgrep='grep --color=auto'
 # http://inessential.com/2012/04/23/ded
 alias ded='rm -rf /Users/brent/Library/Developer/Xcode/DerivedData'
 alias dfh='df -h'
-alias dnsflush='dscacheutil -flushcache'
 alias dumpdb="mysqldump -u root --add-drop-table --no-create-db $1 > dump-`date +%d-%d-%Y`.sql"
 alias dumpschema="mysqldump -u root --add-drop-table --no-create-db --no-data $1 > schema.sql"
 
