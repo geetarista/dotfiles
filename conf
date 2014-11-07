@@ -9,7 +9,9 @@ if [ -f $GIT_PROMPT_FILE ]; then
 fi
 
 hg_ps1() {
-  hg prompt " [{branch}]" 2> /dev/null
+  if [ -d .hg ]; then
+    hg prompt " [{branch}]" 2> /dev/null
+  fi
 }
 
 source ~/.ssh_completion
