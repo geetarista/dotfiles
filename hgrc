@@ -4,6 +4,7 @@ from = rcolvin <rcolvin@couponsinc.com>
 [extensions]
 color =
 prompt = $HOME/workspace/hg-prompt/prompt.py
+shelve =
 
 [trusted]
 users =
