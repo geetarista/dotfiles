@@ -22,6 +22,7 @@ source ~/.ssh_completion
 crontab ~/.crontab
 
 eval "$(rbenv init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # vi mode in bash
 # set -o vi
