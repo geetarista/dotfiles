@@ -48,6 +48,7 @@ alias rmws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -pr
 alias scpkiip="scp -i $HOME/workspace/kiip/.chef/kiip-ssh.pem"
 
 alias t='tail -n 1000 -f'
+alias tailf="less -nUEX +F"
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 

@@ -39,6 +39,11 @@ HISTTIMEFORMAT='%F %T '
 shopt -s histappend # cmdhist
 # Record each command immediately and refresh for other windows
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+# History forever
+# https://twitter.com/michaelhoffman/status/639178145673932800
+# HOSTNAME="$(hostname)"
+# HOSTNAME_SHORT="${HOSTNAME%%.*}"
+# HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
 
 export CLICOLOR=1
 
