@@ -10,6 +10,8 @@ alias bip='bundle install --path vendor/bundle'
 alias be='bundle exec'
 alias bu='bundle update'
 alias bl='bundle lock'
+# https://danielmiessler.com/blog/the-one-line-cli-bandwidth-test/
+alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias bul='bundle unlock'
 
 alias ccat='pygmentize -O style=monokai -f console256 -g'
