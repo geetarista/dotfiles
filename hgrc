@@ -7,8 +7,8 @@ prompt = $HOME/workspace/hg-prompt/prompt.py
 shelve =
 
 [trusted]
-users =
-groups = engineering
+users = build
+groups = releng, engineeringteam
 
 [ui]
 ignore = ~/.hgignore
