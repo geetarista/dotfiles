@@ -7,8 +7,7 @@
 	editor = mvim -w
 	quotepath = false
 [credential]
-    helper = /usr/local/bin/git-credential-osxkeychain
-
+	helper = /usr/local/bin/git-credential-osxkeychain
 [user]
 	name = Robby Colvin
 	email = geetarista@gmail.com
@@ -94,6 +93,12 @@
 [help]
 	browser = gitscm
 	autocorrect = 0
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckobjects = true
 
 [hub]
 protocol = https
