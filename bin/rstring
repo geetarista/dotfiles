@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# bash generate random alphanumeric string
+#
+
+length=$1
+if [[ $length -eq "" ]]; then
+    length=32
+fi
+
+cat /dev/urandom | tr -dc 'a-z0-9' | head -c $length
+echo
+
+# vim: set ft=sh
