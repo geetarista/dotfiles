@@ -1,3 +1,6 @@
+[alias]
+clean = !hg status -un0 | xargs -r0 rm
+
 [email]
 from = rcolvin <rcolvin@couponsinc.com>
 
