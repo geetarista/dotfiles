@@ -76,10 +76,6 @@ rmdsstore() {
   fi
 }
 
-function dnsflush() {
-  sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-}
-
 extract () {
   echo Extracting $1 ...
   if [ -f $1 ] ; then
