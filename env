@@ -16,9 +16,9 @@ export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages"
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
 
-export EDITOR="mvim -f" # don't background
+export EDITOR="mvim"
 
-export GIT_EDITOR="$EDITOR"
+export GIT_EDITOR="$EDITOR -f" # don't background
 
 export AUTOFEATURE=true
 
