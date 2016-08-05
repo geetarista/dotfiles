@@ -7,7 +7,7 @@
 	editor = mvim -w
 	quotepath = false
 [credential]
-	helper = /usr/local/bin/git-credential-osxkeychain
+	helper = osxkeychain
 [user]
 	name = Robby Colvin
 	email = geetarista@gmail.com
