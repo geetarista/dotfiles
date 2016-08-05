@@ -57,6 +57,9 @@ function ghc {
   fi
 }
 
+# Show the active network interface.
+iface() { route get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}'; }
+
 # Grep directory listing.
 function lg {
   ls -la | grep -e "$@";
