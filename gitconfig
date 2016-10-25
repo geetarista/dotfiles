@@ -37,6 +37,7 @@
 	whitespace = nowarn
 [alias]
 	a = add --all
+	alias = "!git config -l | grep ^alias | cut -c 7- | sort"
 	begone = "!begone() { git branch -d $1 && git push origin :$1 && git remote prune origin; }; begone"
 	c = commit
 	ca = commit --amend --reuse-message=HEAD
