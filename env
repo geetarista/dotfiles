@@ -22,11 +22,11 @@ export GIT_EDITOR="$EDITOR -f" # don't background
 
 export AUTOFEATURE=true
 
-export CDPATH=.:~:~/workspace:~/gocode/src/github.com/geetarista
-
 # Go-specific
 export GOPATH="$HOME/go"
 export PATH="$PATH:${GOPATH}/bin"
+
+export CDPATH=".:~:~/workspace:${GOPATH}/src/github.com/geetarista"
 
 # Colors for `man`
 export LESS_TERMCAP_mb=$'\E[01;31m'
