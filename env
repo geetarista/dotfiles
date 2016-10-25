@@ -25,7 +25,7 @@ export AUTOFEATURE=true
 export CDPATH=.:~:~/workspace:~/gocode/src/github.com/geetarista
 
 # Go-specific
-export GOPATH="$HOME/gocode"
+export GOPATH="$HOME/go"
 export PATH="$PATH:${GOPATH}/bin"
 
 # Colors for `man`
