@@ -13,4 +13,3 @@ To use, just run the following commands:
     sh install.sh
 
 This will create a symbolic link to each of these files in your home directory.
-
