@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# vim:sts=2:sw=2:et:
+#
+# Wraps openconnect vpn cli
+#
+
+COMMAND=${1:-start}
+
+if [ "$COMMAND" = "start" ]; then
+  printf "Starting VPN.\n"
+  sudo openconnect --user=$SUDO_USER \
+                   --authgroup VPN_AUTHGROUP \
+                   --background VPN_BACKGROUND \
+                   # --quiet
+  exit $?
+fi
+
+if [ "$COMMAND" = "stop" ]; then
+  sudo pkill -2 openconnect
+  exit $?
+fi
+
+echo "Usage: $(basename "$0") start|stop"
